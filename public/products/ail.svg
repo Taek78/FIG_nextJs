@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Tête d'ail</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 56 C140 66 160 100 160 140 C160 170 135 182 100 182 C65 182 40 170 40 140 C40 100 60 66 100 56Z" fill="#fbf9f3" stroke="#e0dac9" stroke-width="3"/>
+    <g stroke="#d8d2bf" stroke-width="4" fill="none"><path d="M100 60 C80 100 80 150 100 180"/><path d="M100 60 C120 100 120 150 100 180"/><path d="M100 60 C62 100 60 150 75 175"/><path d="M100 60 C138 100 140 150 125 175"/></g>
+    <path d="M94 58 C96 44 98 30 100 18 C102 30 104 44 106 58Z" fill="#c9bfa0"/></g>
+</svg>

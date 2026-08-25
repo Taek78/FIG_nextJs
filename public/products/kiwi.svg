@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Kiwi entier et coupé</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <ellipse cx="70" cy="120" rx="40" ry="48" fill="#8c6a3f"/>
+    <circle cx="135" cy="118" r="44" fill="#8c6a3f"/>
+    <circle cx="135" cy="118" r="38" fill="#9fcf5a"/>
+    <circle cx="135" cy="118" r="10" fill="#f1f1d6"/>
+    <g fill="#14301f"><circle cx="154.0" cy="118.0" r="2"/><circle cx="151.5" cy="127.5" r="2"/><circle cx="144.5" cy="134.5" r="2"/><circle cx="135.0" cy="137.0" r="2"/><circle cx="125.5" cy="134.5" r="2"/><circle cx="118.5" cy="127.5" r="2"/><circle cx="116.0" cy="118.0" r="2"/><circle cx="118.5" cy="108.5" r="2"/><circle cx="125.5" cy="101.5" r="2"/><circle cx="135.0" cy="99.0" r="2"/><circle cx="144.5" cy="101.5" r="2"/><circle cx="151.5" cy="108.5" r="2"/></g></g>
+</svg>

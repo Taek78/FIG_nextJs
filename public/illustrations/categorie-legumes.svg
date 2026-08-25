@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Légumes : tomate, carotte et poireau</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  
+    <ellipse cx="200" cy="330" rx="130" ry="14" fill="#14301f" opacity="0.08"/>
+    <g transform="translate(40 100) rotate(0 100 100) scale(1)">
+    <rect x="84" y="90" width="32" height="90" rx="8" fill="#fbf9f3" stroke="#d8e0c8" stroke-width="3"/>
+    <path d="M84 100 C70 70 50 40 40 20 C70 30 90 60 100 90Z" fill="#6fbf73"/>
+    <path d="M116 100 C130 70 150 40 160 20 C130 30 110 60 100 90Z" fill="#2f7d4f"/>
+    <path d="M92 96 C92 60 96 40 100 20 C104 40 108 60 108 96Z" fill="#6fbf73"/>
+    <g stroke="#d8e0c8" stroke-width="3" stroke-linecap="round"><path d="M94 120 L94 170"/><path d="M106 120 L106 170"/></g>
+    <path d="M88 180 L90 192 M100 180 L100 194 M112 180 L110 192" stroke="#d8d2bf" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(200 100) rotate(15 100 100) scale(1)">
+    <path d="M78 70 L122 70 L105 185 C103 190 97 190 95 185Z" fill="#ee8a2e"/>
+    <g stroke="#d9751e" stroke-width="4" stroke-linecap="round"><path d="M84 100 L116 100"/><path d="M88 125 L112 125"/><path d="M93 150 L107 150"/></g>
+    <path d="M100 70 C80 50 70 30 80 16 C90 30 96 44 100 70Z" fill="#3f8f5a"/>
+    <path d="M100 70 C100 44 104 26 118 14 C116 34 110 52 100 70Z" fill="#2f7d4f"/>
+    <path d="M100 70 C116 52 134 44 146 48 C134 56 116 66 100 70Z" fill="#3f8f5a"/></g><g transform="translate(110 130) rotate(0 100 100) scale(1)">
+    <circle cx="100" cy="115" r="64" fill="#d9483b"/>
+    <circle cx="74" cy="92" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 58 L84 42 L92 62 L70 52 L86 70 L62 72 L84 80 L100 74 L116 80 L138 72 L114 70 L130 52 L108 62 L116 42Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="24" rx="3" fill="#2f7d4f"/></g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Tomate ronde</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <circle cx="100" cy="115" r="64" fill="#d9483b"/>
+    <circle cx="74" cy="92" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 58 L84 42 L92 62 L70 52 L86 70 L62 72 L84 80 L100 74 L116 80 L138 72 L114 70 L130 52 L108 62 L116 42Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="24" rx="3" fill="#2f7d4f"/></g>
+</svg>

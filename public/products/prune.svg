@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Prune</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <ellipse cx="100" cy="112" rx="58" ry="66" fill="#6c3a7e"/>
+    <path d="M100 50 C90 80 90 140 100 176" stroke="rgba(255,255,255,0.18)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="74" cy="86" r="13" fill="rgba(255,255,255,0.35)"/>
+    <rect x="97" y="32" width="6" height="20" rx="3" fill="#6b4b2a"/>
+    <path d="M103 42 C115 26 136 28 142 36 C132 50 114 52 103 42Z" fill="#3f8f5a"/></g>
+</svg>

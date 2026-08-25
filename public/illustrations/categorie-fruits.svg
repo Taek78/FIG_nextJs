@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Fruits : pomme, orange et raisin</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  
+    <ellipse cx="200" cy="330" rx="130" ry="14" fill="#14301f" opacity="0.08"/>
+    <g transform="translate(40 110) rotate(0 100 100) scale(1)">
+    <circle cx="100" cy="112" r="68" fill="#ee8a2e"/>
+    <circle cx="76" cy="88" r="16" fill="rgba(255,255,255,0.35)"/>
+    <g fill="#d9751e" opacity="0.45"><circle cx="145.0" cy="112.0" r="3"/><circle cx="140.5" cy="131.5" r="3"/><circle cx="128.1" cy="147.2" r="3"/><circle cx="110.0" cy="155.9" r="3"/><circle cx="90.0" cy="155.9" r="3"/><circle cx="71.9" cy="147.2" r="3"/><circle cx="59.5" cy="131.5" r="3"/><circle cx="55.0" cy="112.0" r="3"/><circle cx="59.5" cy="92.5" r="3"/><circle cx="71.9" cy="76.8" r="3"/><circle cx="90.0" cy="68.1" r="3"/><circle cx="110.0" cy="68.1" r="3"/><circle cx="128.1" cy="76.8" r="3"/><circle cx="140.5" cy="92.5" r="3"/></g>
+    <path d="M100 44 C112 22 136 24 142 32 C132 46 112 52 100 44Z" fill="#3f8f5a"/></g><g transform="translate(200 100) rotate(0 100 100) scale(1)">
+    <rect x="97" y="22" width="6" height="40" rx="3" fill="#6b4b2a"/>
+    <path d="M103 36 C120 24 140 28 146 36 C136 48 118 48 103 36Z" fill="#3f8f5a"/>
+    <g fill="#6c3a7e">
+      <circle cx="70" cy="80" r="17"/><circle cx="100" cy="74" r="17"/><circle cx="130" cy="80" r="17"/><circle cx="60" cy="108" r="17"/><circle cx="90" cy="104" r="17"/><circle cx="120" cy="104" r="17"/><circle cx="148" cy="108" r="17"/><circle cx="75" cy="134" r="17"/><circle cx="105" cy="132" r="17"/><circle cx="135" cy="134" r="17"/><circle cx="90" cy="160" r="17"/><circle cx="120" cy="160" r="17"/><circle cx="105" cy="184" r="17"/>
+    </g>
+    <g fill="rgba(255,255,255,0.3)"><circle cx="64" cy="74" r="4.5"/><circle cx="94" cy="68" r="4.5"/><circle cx="124" cy="74" r="4.5"/><circle cx="84" cy="98" r="4.5"/></g></g><g transform="translate(120 130) rotate(0 100 100) scale(1.05)">
+    <path d="M100 60 C75 35 25 50 25 105 C25 150 60 185 100 175 C140 185 175 150 175 105 C175 50 125 35 100 60Z" fill="#d9483b"/>
+    <path d="M62 80 C52 95 52 120 60 135" stroke="rgba(255,255,255,0.35)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="30" width="8" height="30" rx="4" fill="#6b4b2a"/>
+    <path d="M104 48 C120 30 145 32 150 40 C140 55 118 58 104 48Z" fill="#3f8f5a"/></g>
+</svg>

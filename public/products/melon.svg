@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Melon charentais</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <circle cx="100" cy="110" r="68" fill="#b9c96a"/>
+    <g stroke="#6f8c3a" stroke-width="5" fill="none">
+      <path d="M100 42 C60 70 60 150 100 178"/><path d="M100 42 C140 70 140 150 100 178"/><path d="M100 42 C85 70 85 150 100 178"/><path d="M100 42 C115 70 115 150 100 178"/>
+    </g>
+    <path d="M96 36 L104 36 L104 48 L96 48Z" fill="#6b4b2a"/>
+    <path d="M104 44 C116 28 138 30 144 38 C134 52 116 54 104 44Z" fill="#3f8f5a"/></g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Carotte avec ses fanes</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M78 70 L122 70 L105 185 C103 190 97 190 95 185Z" fill="#ee8a2e"/>
+    <g stroke="#d9751e" stroke-width="4" stroke-linecap="round"><path d="M84 100 L116 100"/><path d="M88 125 L112 125"/><path d="M93 150 L107 150"/></g>
+    <path d="M100 70 C80 50 70 30 80 16 C90 30 96 44 100 70Z" fill="#3f8f5a"/>
+    <path d="M100 70 C100 44 104 26 118 14 C116 34 110 52 100 70Z" fill="#2f7d4f"/>
+    <path d="M100 70 C116 52 134 44 146 48 C134 56 116 66 100 70Z" fill="#3f8f5a"/></g>
+</svg>

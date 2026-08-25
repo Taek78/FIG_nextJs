@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Citron jaune</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M30 110 C30 70 60 50 100 50 C140 50 170 70 170 110 C170 150 140 170 100 170 C60 170 30 150 30 110Z" fill="#f2c94c"/>
+    <ellipse cx="24" cy="110" rx="10" ry="7" fill="#e2ab2a"/>
+    <ellipse cx="176" cy="110" rx="10" ry="7" fill="#e2ab2a"/>
+    <circle cx="75" cy="90" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M150 70 C160 50 182 52 188 60 C178 74 160 78 150 70Z" fill="#3f8f5a"/></g>
+</svg>

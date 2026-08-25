@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Courgette verte</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M38 150 C30 130 50 70 120 52 C160 44 175 58 172 74 C160 100 90 150 55 162 C45 165 41 158 38 150Z" fill="#3f8f5a"/>
+    <path d="M60 140 C80 110 120 80 150 68" stroke="#a7d9a1" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M170 62 C178 52 190 52 190 60 C182 66 174 68 170 62Z" fill="#6b4b2a"/></g>
+</svg>

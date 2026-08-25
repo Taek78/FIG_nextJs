@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Pomme Gala rouge</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 60 C75 35 25 50 25 105 C25 150 60 185 100 175 C140 185 175 150 175 105 C175 50 125 35 100 60Z" fill="#d9483b"/>
+    <path d="M62 80 C52 95 52 120 60 135" stroke="rgba(255,255,255,0.35)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="30" width="8" height="30" rx="4" fill="#6b4b2a"/>
+    <path d="M104 48 C120 30 145 32 150 40 C140 55 118 58 104 48Z" fill="#3f8f5a"/></g>
+</svg>

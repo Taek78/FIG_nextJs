@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Abricot</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <circle cx="100" cy="112" r="62" fill="#f2a541"/>
+    <path d="M100 54 C92 80 92 140 100 172" stroke="rgba(150,70,20,0.3)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="74" cy="92" r="13" fill="rgba(255,255,255,0.35)"/>
+    <rect x="97" y="32" width="6" height="22" rx="3" fill="#6b4b2a"/>
+    <path d="M103 44 C115 28 136 30 142 38 C132 50 114 54 103 44Z" fill="#3f8f5a"/></g>
+</svg>

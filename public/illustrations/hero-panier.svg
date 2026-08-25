@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Cagette de fruits et légumes frais</title>
+  <rect width="800" height="600" fill="transparent"/>
+  
+    <circle cx="640" cy="120" r="90" fill="#f2c94c" opacity="0.55"/>
+    <circle cx="160" cy="480" r="140" fill="#cfe8d6" opacity="0.7"/>
+    <ellipse cx="400" cy="540" rx="260" ry="18" fill="#14301f" opacity="0.08"/>
+    <g transform="translate(430 170) rotate(10 100 100) scale(1.3)">
+    <rect x="84" y="90" width="32" height="90" rx="8" fill="#fbf9f3" stroke="#d8e0c8" stroke-width="3"/>
+    <path d="M84 100 C70 70 50 40 40 20 C70 30 90 60 100 90Z" fill="#6fbf73"/>
+    <path d="M116 100 C130 70 150 40 160 20 C130 30 110 60 100 90Z" fill="#2f7d4f"/>
+    <path d="M92 96 C92 60 96 40 100 20 C104 40 108 60 108 96Z" fill="#6fbf73"/>
+    <g stroke="#d8e0c8" stroke-width="3" stroke-linecap="round"><path d="M94 120 L94 170"/><path d="M106 120 L106 170"/></g>
+    <path d="M88 180 L90 192 M100 180 L100 194 M112 180 L110 192" stroke="#d8d2bf" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(120 170) rotate(-12 100 100) scale(1.3)">
+    <path d="M78 70 L122 70 L105 185 C103 190 97 190 95 185Z" fill="#ee8a2e"/>
+    <g stroke="#d9751e" stroke-width="4" stroke-linecap="round"><path d="M84 100 L116 100"/><path d="M88 125 L112 125"/><path d="M93 150 L107 150"/></g>
+    <path d="M100 70 C80 50 70 30 80 16 C90 30 96 44 100 70Z" fill="#3f8f5a"/>
+    <path d="M100 70 C100 44 104 26 118 14 C116 34 110 52 100 70Z" fill="#2f7d4f"/>
+    <path d="M100 70 C116 52 134 44 146 48 C134 56 116 66 100 70Z" fill="#3f8f5a"/></g>
+    <g transform="translate(220 200) rotate(0 100 100) scale(1.25)">
+    <ellipse cx="100" cy="140" rx="72" ry="40" fill="#2f7d4f"/>
+    <path d="M30 140 C20 100 50 60 80 70 C90 40 130 40 140 70 C170 60 190 110 165 140Z" fill="#6fbf73"/>
+    <path d="M55 140 C50 110 70 90 95 96 C100 80 125 80 130 98 C155 92 165 120 150 140Z" fill="#a7d9a1"/>
+    <path d="M75 140 C75 120 90 110 100 116 C110 110 125 120 125 140Z" fill="#cfe8d6"/></g><g transform="translate(480 230) rotate(0 100 100) scale(1.2)">
+    <path d="M60 70 C40 90 40 160 70 178 C85 186 90 170 100 170 C110 170 115 186 130 178 C160 160 160 90 140 70 C125 58 110 72 100 72 C90 72 75 58 60 70Z" fill="#d9483b"/>
+    <path d="M72 90 C62 110 62 140 72 160" stroke="rgba(255,255,255,0.35)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="38" width="8" height="34" rx="4" fill="#2f7d4f"/></g>
+    <g transform="translate(130 260) rotate(0 100 100) scale(1.25)">
+    <path d="M100 60 C75 35 25 50 25 105 C25 150 60 185 100 175 C140 185 175 150 175 105 C175 50 125 35 100 60Z" fill="#d9483b"/>
+    <path d="M62 80 C52 95 52 120 60 135" stroke="rgba(255,255,255,0.35)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="30" width="8" height="30" rx="4" fill="#6b4b2a"/>
+    <path d="M104 48 C120 30 145 32 150 40 C140 55 118 58 104 48Z" fill="#3f8f5a"/></g><g transform="translate(360 260) rotate(0 100 100) scale(1.2)">
+    <circle cx="100" cy="112" r="68" fill="#ee8a2e"/>
+    <circle cx="76" cy="88" r="16" fill="rgba(255,255,255,0.35)"/>
+    <g fill="#d9751e" opacity="0.45"><circle cx="145.0" cy="112.0" r="3"/><circle cx="140.5" cy="131.5" r="3"/><circle cx="128.1" cy="147.2" r="3"/><circle cx="110.0" cy="155.9" r="3"/><circle cx="90.0" cy="155.9" r="3"/><circle cx="71.9" cy="147.2" r="3"/><circle cx="59.5" cy="131.5" r="3"/><circle cx="55.0" cy="112.0" r="3"/><circle cx="59.5" cy="92.5" r="3"/><circle cx="71.9" cy="76.8" r="3"/><circle cx="90.0" cy="68.1" r="3"/><circle cx="110.0" cy="68.1" r="3"/><circle cx="128.1" cy="76.8" r="3"/><circle cx="140.5" cy="92.5" r="3"/></g>
+    <path d="M100 44 C112 22 136 24 142 32 C132 46 112 52 100 44Z" fill="#3f8f5a"/></g><g transform="translate(250 280) rotate(0 100 100) scale(1.2)">
+    <path d="M100 40 C115 40 118 70 135 95 C160 125 160 175 100 178 C40 175 40 125 65 95 C82 70 85 40 100 40Z" fill="#c9d45c"/>
+    <path d="M70 120 C66 135 70 150 80 160" stroke="rgba(255,255,255,0.35)" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <rect x="97" y="18" width="7" height="28" rx="3.5" fill="#6b4b2a"/>
+    <path d="M104 40 C118 24 140 26 146 34 C136 48 116 50 104 40Z" fill="#3f8f5a"/></g>
+    <g transform="translate(520 300) rotate(0 100 100) scale(1.1)">
+    <rect x="97" y="22" width="6" height="40" rx="3" fill="#6b4b2a"/>
+    <path d="M103 36 C120 24 140 28 146 36 C136 48 118 48 103 36Z" fill="#3f8f5a"/>
+    <g fill="#6c3a7e">
+      <circle cx="70" cy="80" r="17"/><circle cx="100" cy="74" r="17"/><circle cx="130" cy="80" r="17"/><circle cx="60" cy="108" r="17"/><circle cx="90" cy="104" r="17"/><circle cx="120" cy="104" r="17"/><circle cx="148" cy="108" r="17"/><circle cx="75" cy="134" r="17"/><circle cx="105" cy="132" r="17"/><circle cx="135" cy="134" r="17"/><circle cx="90" cy="160" r="17"/><circle cx="120" cy="160" r="17"/><circle cx="105" cy="184" r="17"/>
+    </g>
+    <g fill="rgba(255,255,255,0.3)"><circle cx="64" cy="74" r="4.5"/><circle cx="94" cy="68" r="4.5"/><circle cx="124" cy="74" r="4.5"/><circle cx="84" cy="98" r="4.5"/></g></g><g transform="translate(330 330) rotate(0 100 100) scale(1.15)">
+    <circle cx="100" cy="115" r="64" fill="#d9483b"/>
+    <circle cx="74" cy="92" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 58 L84 42 L92 62 L70 52 L86 70 L62 72 L84 80 L100 74 L116 80 L138 72 L114 70 L130 52 L108 62 L116 42Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="24" rx="3" fill="#2f7d4f"/></g>
+    <!-- cagette en bois -->
+    <path d="M150 470 L650 470 L625 560 L175 560Z" fill="#c9a06a"/>
+    <g stroke="#a67c4e" stroke-width="4"><path d="M160 500 L640 500"/><path d="M166 530 L634 530"/></g>
+    <rect x="150" y="460" width="500" height="16" rx="4" fill="#b07a4a"/>
+</svg>

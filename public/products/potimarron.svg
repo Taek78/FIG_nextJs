@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Potimarron</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <g fill="#e8772e">
+      <ellipse cx="100" cy="120" rx="72" ry="58"/>
+    </g>
+    <g stroke="#c75f1e" stroke-width="5" fill="none"><path d="M100 62 C60 80 60 160 100 178"/><path d="M100 62 C140 80 140 160 100 178"/><path d="M100 62 C82 80 82 160 100 178"/><path d="M100 62 C118 80 118 160 100 178"/></g>
+    <rect x="94" y="40" width="12" height="26" rx="5" fill="#6b4b2a"/></g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Tranche de pastèque</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M28 86 A72 72 0 0 0 172 86 Z" fill="#2f7d4f"/>
+    <path d="M40 92 A60 60 0 0 0 160 92 Z" fill="#cfe8d6"/>
+    <path d="M48 96 A52 52 0 0 0 152 96 Z" fill="#e25a52"/>
+    <g fill="#14301f"><ellipse cx="80" cy="112" rx="3" ry="5"/><ellipse cx="110" cy="120" rx="3" ry="5"/><ellipse cx="95" cy="135" rx="3" ry="5"/><ellipse cx="125" cy="108" rx="3" ry="5"/><ellipse cx="70" cy="125" rx="3" ry="5"/><ellipse cx="120" cy="140" rx="3" ry="5"/></g></g>
+</svg>

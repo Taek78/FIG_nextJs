@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="t">
+  <title id="t">Calendrier des saisons avec fruits</title>
+  <rect width="640" height="360" fill="#f7f5ee"/>
+  
+    <rect x="40" y="50" width="260" height="260" rx="20" fill="#fbf9f3" stroke="#dfe5d8" stroke-width="4"/>
+    <rect x="40" y="50" width="260" height="56" rx="20" fill="#2f7d4f"/>
+    <g fill="#e6ebe0"><rect x="64" y="130" width="40" height="36" rx="8" /><rect x="124" y="130" width="40" height="36" rx="8" /><rect x="184" y="130" width="40" height="36" rx="8" /><rect x="244" y="130" width="40" height="36" rx="8" /><rect x="64" y="186" width="40" height="36" rx="8" fill="#6fbf73"/><rect x="124" y="186" width="40" height="36" rx="8" fill="#6fbf73"/><rect x="184" y="186" width="40" height="36" rx="8" fill="#6fbf73"/><rect x="244" y="186" width="40" height="36" rx="8" fill="#6fbf73"/><rect x="64" y="242" width="40" height="36" rx="8" /><rect x="124" y="242" width="40" height="36" rx="8" /><rect x="184" y="242" width="40" height="36" rx="8" /><rect x="244" y="242" width="40" height="36" rx="8" /></g>
+    <g transform="translate(330 70) rotate(0 100 100) scale(1)">
+    <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6b26b"/><stop offset="1" stop-color="#e8614d"/></linearGradient></defs>
+    <circle cx="100" cy="112" r="66" fill="url(#pg)"/>
+    <path d="M100 50 C88 80 88 140 100 176" stroke="rgba(120,40,30,0.25)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="72" cy="90" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M104 48 C116 28 140 30 146 38 C136 52 116 56 104 48Z" fill="#3f8f5a"/></g><g transform="translate(460 100) rotate(0 100 100) scale(1)">
+    <path d="M100 70 C140 70 165 90 165 115 C165 150 130 180 100 185 C70 180 35 150 35 115 C35 90 60 70 100 70Z" fill="#d9483b"/>
+    <g fill="#f2c94c"><ellipse cx="70" cy="110" rx="3" ry="4.5"/><ellipse cx="95" cy="100" rx="3" ry="4.5"/><ellipse cx="120" cy="110" rx="3" ry="4.5"/><ellipse cx="80" cy="140" rx="3" ry="4.5"/><ellipse cx="110" cy="140" rx="3" ry="4.5"/><ellipse cx="135" cy="130" rx="3" ry="4.5"/><ellipse cx="100" cy="160" rx="3" ry="4.5"/><ellipse cx="60" cy="130" rx="3" ry="4.5"/></g>
+    <path d="M60 75 L80 60 L100 72 L120 60 L140 75 L125 85 L100 78 L75 85Z" fill="#3f8f5a"/>
+    <rect x="97" y="38" width="6" height="28" rx="3" fill="#2f7d4f"/></g><g transform="translate(400 170) rotate(0 100 100) scale(1)">
+    <path d="M100 40 C115 70 165 90 165 130 C165 162 135 182 100 182 C65 182 35 162 35 130 C35 90 85 70 100 40Z" fill="#6c3a7e"/>
+    <path d="M100 50 C110 80 150 100 150 130" stroke="rgba(255,255,255,0.18)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M100 40 C106 58 112 70 118 78 C110 74 102 66 100 60 C98 66 90 74 82 78 C88 70 94 58 100 40Z" fill="#3f8f5a"/>
+    <rect x="97" y="26" width="6" height="18" rx="3" fill="#6b4b2a"/></g>
+</svg>

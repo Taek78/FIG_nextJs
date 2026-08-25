@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Framboise</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <g fill="#b8324f">
+      <circle cx="100" cy="80" r="16"/><circle cx="80" cy="95" r="16"/><circle cx="120" cy="95" r="16"/><circle cx="70" cy="118" r="16"/><circle cx="100" cy="112" r="16"/><circle cx="130" cy="118" r="16"/><circle cx="80" cy="140" r="16"/><circle cx="120" cy="140" r="16"/><circle cx="100" cy="160" r="16"/>
+    </g>
+    <g fill="rgba(255,255,255,0.3)"><circle cx="95" cy="74" r="4"/><circle cx="75" cy="90" r="4"/><circle cx="115" cy="90" r="4"/><circle cx="95" cy="107" r="4"/></g>
+    <path d="M100 66 L70 48 L90 60 L85 38 L100 58 L115 38 L110 60 L130 48Z" fill="#3f8f5a"/></g>
+</svg>

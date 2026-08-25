@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Grappe de raisin noir</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <rect x="97" y="22" width="6" height="40" rx="3" fill="#6b4b2a"/>
+    <path d="M103 36 C120 24 140 28 146 36 C136 48 118 48 103 36Z" fill="#3f8f5a"/>
+    <g fill="#6c3a7e">
+      <circle cx="70" cy="80" r="17"/><circle cx="100" cy="74" r="17"/><circle cx="130" cy="80" r="17"/><circle cx="60" cy="108" r="17"/><circle cx="90" cy="104" r="17"/><circle cx="120" cy="104" r="17"/><circle cx="148" cy="108" r="17"/><circle cx="75" cy="134" r="17"/><circle cx="105" cy="132" r="17"/><circle cx="135" cy="134" r="17"/><circle cx="90" cy="160" r="17"/><circle cx="120" cy="160" r="17"/><circle cx="105" cy="184" r="17"/>
+    </g>
+    <g fill="rgba(255,255,255,0.3)"><circle cx="64" cy="74" r="4.5"/><circle cx="94" cy="68" r="4.5"/><circle cx="124" cy="74" r="4.5"/><circle cx="84" cy="98" r="4.5"/></g></g>
+</svg>

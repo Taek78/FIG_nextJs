@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Pêche jaune</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6b26b"/><stop offset="1" stop-color="#e8614d"/></linearGradient></defs>
+    <circle cx="100" cy="112" r="66" fill="url(#pg)"/>
+    <path d="M100 50 C88 80 88 140 100 176" stroke="rgba(120,40,30,0.25)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="72" cy="90" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M104 48 C116 28 140 30 146 38 C136 52 116 56 104 48Z" fill="#3f8f5a"/></g>
+</svg>

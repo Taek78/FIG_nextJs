@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="t">
+  <title id="t">Poêlée de légumes d'été</title>
+  <rect width="640" height="360" fill="#f7f5ee"/>
+  
+    <ellipse cx="320" cy="220" rx="200" ry="110" fill="#3b3b3b"/>
+    <ellipse cx="320" cy="210" rx="180" ry="92" fill="#555"/>
+    <rect x="500" y="195" width="120" height="28" rx="14" fill="#3b3b3b"/>
+    <g transform="translate(200 110) rotate(0 100 100) scale(0.8)">
+    <path d="M38 150 C30 130 50 70 120 52 C160 44 175 58 172 74 C160 100 90 150 55 162 C45 165 41 158 38 150Z" fill="#3f8f5a"/>
+    <path d="M60 140 C80 110 120 80 150 68" stroke="#a7d9a1" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M170 62 C178 52 190 52 190 60 C182 66 174 68 170 62Z" fill="#6b4b2a"/></g><g transform="translate(300 120) rotate(0 100 100) scale(0.75)">
+    <circle cx="100" cy="115" r="64" fill="#d9483b"/>
+    <circle cx="74" cy="92" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 58 L84 42 L92 62 L70 52 L86 70 L62 72 L84 80 L100 74 L116 80 L138 72 L114 70 L130 52 L108 62 L116 42Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="24" rx="3" fill="#2f7d4f"/></g><g transform="translate(250 150) rotate(0 100 100) scale(0.75)">
+    <path d="M60 70 C40 90 40 160 70 178 C85 186 90 170 100 170 C110 170 115 186 130 178 C160 160 160 90 140 70 C125 58 110 72 100 72 C90 72 75 58 60 70Z" fill="#d9483b"/>
+    <path d="M72 90 C62 110 62 140 72 160" stroke="rgba(255,255,255,0.35)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="38" width="8" height="34" rx="4" fill="#2f7d4f"/></g><g transform="translate(340 150) rotate(0 100 100) scale(0.75)">
+    <path d="M100 70 C140 70 165 105 165 140 C165 170 140 186 105 186 C65 186 35 165 35 130 C35 95 60 70 100 70Z" fill="#6c3a7e"/>
+    <circle cx="70" cy="120" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 76 L78 60 L94 74 L82 50 L100 66 L118 50 L106 74 L122 60Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="28" rx="3" fill="#2f7d4f"/></g>
+</svg>

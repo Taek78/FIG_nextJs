@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Fraise</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 70 C140 70 165 90 165 115 C165 150 130 180 100 185 C70 180 35 150 35 115 C35 90 60 70 100 70Z" fill="#d9483b"/>
+    <g fill="#f2c94c"><ellipse cx="70" cy="110" rx="3" ry="4.5"/><ellipse cx="95" cy="100" rx="3" ry="4.5"/><ellipse cx="120" cy="110" rx="3" ry="4.5"/><ellipse cx="80" cy="140" rx="3" ry="4.5"/><ellipse cx="110" cy="140" rx="3" ry="4.5"/><ellipse cx="135" cy="130" rx="3" ry="4.5"/><ellipse cx="100" cy="160" rx="3" ry="4.5"/><ellipse cx="60" cy="130" rx="3" ry="4.5"/></g>
+    <path d="M60 75 L80 60 L100 72 L120 60 L140 75 L125 85 L100 78 L75 85Z" fill="#3f8f5a"/>
+    <rect x="97" y="38" width="6" height="28" rx="3" fill="#2f7d4f"/></g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Haricots verts</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <g stroke="#2f7d4f" stroke-width="14" stroke-linecap="round" fill="none">
+      <path d="M40 150 C70 110 120 70 160 50"/><path d="M50 170 C80 130 130 90 170 72"/><path d="M34 126 C64 90 110 56 146 36"/>
+    </g>
+    <g stroke="#a7d9a1" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8">
+      <path d="M44 146 C74 106 122 68 156 50"/><path d="M54 166 C84 126 132 90 166 74"/>
+    </g></g>
+</svg>

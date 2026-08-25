@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Laitue</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <ellipse cx="100" cy="140" rx="72" ry="40" fill="#2f7d4f"/>
+    <path d="M30 140 C20 100 50 60 80 70 C90 40 130 40 140 70 C170 60 190 110 165 140Z" fill="#6fbf73"/>
+    <path d="M55 140 C50 110 70 90 95 96 C100 80 125 80 130 98 C155 92 165 120 150 140Z" fill="#a7d9a1"/>
+    <path d="M75 140 C75 120 90 110 100 116 C110 110 125 120 125 140Z" fill="#cfe8d6"/></g>
+</svg>

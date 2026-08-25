@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Poireau</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <rect x="84" y="90" width="32" height="90" rx="8" fill="#fbf9f3" stroke="#d8e0c8" stroke-width="3"/>
+    <path d="M84 100 C70 70 50 40 40 20 C70 30 90 60 100 90Z" fill="#6fbf73"/>
+    <path d="M116 100 C130 70 150 40 160 20 C130 30 110 60 100 90Z" fill="#2f7d4f"/>
+    <path d="M92 96 C92 60 96 40 100 20 C104 40 108 60 108 96Z" fill="#6fbf73"/>
+    <g stroke="#d8e0c8" stroke-width="3" stroke-linecap="round"><path d="M94 120 L94 170"/><path d="M106 120 L106 170"/></g>
+    <path d="M88 180 L90 192 M100 180 L100 194 M112 180 L110 192" stroke="#d8d2bf" stroke-width="3" stroke-linecap="round"/></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Poivron rouge</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M60 70 C40 90 40 160 70 178 C85 186 90 170 100 170 C110 170 115 186 130 178 C160 160 160 90 140 70 C125 58 110 72 100 72 C90 72 75 58 60 70Z" fill="#d9483b"/>
+    <path d="M72 90 C62 110 62 140 72 160" stroke="rgba(255,255,255,0.35)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <rect x="96" y="38" width="8" height="34" rx="4" fill="#2f7d4f"/></g>
+</svg>

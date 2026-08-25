@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Figue violette</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 40 C115 70 165 90 165 130 C165 162 135 182 100 182 C65 182 35 162 35 130 C35 90 85 70 100 40Z" fill="#6c3a7e"/>
+    <path d="M100 50 C110 80 150 100 150 130" stroke="rgba(255,255,255,0.18)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M100 40 C106 58 112 70 118 78 C110 74 102 66 100 60 C98 66 90 74 82 78 C88 70 94 58 100 40Z" fill="#3f8f5a"/>
+    <rect x="97" y="26" width="6" height="18" rx="3" fill="#6b4b2a"/></g>
+</svg>

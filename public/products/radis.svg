@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Radis rouge</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <circle cx="100" cy="125" r="50" fill="#d6405a"/>
+    <path d="M100 175 C100 185 102 195 106 200" stroke="#fbf9f3" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <circle cx="78" cy="108" r="12" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 78 C80 60 70 40 74 22 C90 36 98 56 100 78Z" fill="#3f8f5a"/>
+    <path d="M100 78 C104 56 112 36 128 22 C132 40 120 60 100 78Z" fill="#2f7d4f"/></g>
+</svg>

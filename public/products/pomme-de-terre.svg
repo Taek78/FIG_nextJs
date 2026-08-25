@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Pomme de terre</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M45 120 C35 80 70 50 110 56 C150 62 170 95 160 135 C150 170 100 180 65 160 C50 150 48 135 45 120Z" fill="#c9a06a"/>
+    <g fill="#a67c4e"><ellipse cx="80" cy="90" rx="5" ry="3.5"/><ellipse cx="120" cy="85" rx="5" ry="3.5"/><ellipse cx="135" cy="125" rx="5" ry="3.5"/><ellipse cx="95" cy="140" rx="5" ry="3.5"/><ellipse cx="70" cy="125" rx="5" ry="3.5"/></g>
+    <circle cx="80" cy="80" r="12" fill="rgba(255,255,255,0.35)"/></g>
+</svg>

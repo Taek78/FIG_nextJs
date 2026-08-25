@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Oignon jaune</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 50 C150 60 170 110 160 145 C150 175 125 184 100 184 C75 184 50 175 40 145 C30 110 50 60 100 50Z" fill="#d8a15a"/>
+    <g stroke="#b77c38" stroke-width="4" fill="none" opacity="0.7"><path d="M100 54 C70 90 70 150 100 182"/><path d="M100 54 C130 90 130 150 100 182"/><path d="M100 54 C88 90 88 150 100 182"/><path d="M100 54 C112 90 112 150 100 182"/></g>
+    <path d="M92 52 C94 36 98 26 100 18 C102 26 106 36 108 52Z" fill="#8fa86a"/></g>
+</svg>

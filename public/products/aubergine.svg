@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Aubergine</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M100 70 C140 70 165 105 165 140 C165 170 140 186 105 186 C65 186 35 165 35 130 C35 95 60 70 100 70Z" fill="#6c3a7e"/>
+    <circle cx="70" cy="120" r="14" fill="rgba(255,255,255,0.35)"/>
+    <path d="M100 76 L78 60 L94 74 L82 50 L100 66 L118 50 L106 74 L122 60Z" fill="#2f7d4f"/>
+    <rect x="97" y="36" width="6" height="28" rx="3" fill="#2f7d4f"/></g>
+</svg>

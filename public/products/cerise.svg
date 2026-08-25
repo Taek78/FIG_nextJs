@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Cerises</title>
+  <rect width="400" height="400" fill="#f7f5ee"/>
+  <ellipse cx="200" cy="322" rx="92" ry="14" fill="#14301f" opacity="0.08"/>
+  <g transform="translate(80 70) scale(1.2)">
+    <path d="M70 130 C70 80 95 50 118 28" stroke="#6b4b2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M135 122 C135 80 125 55 118 28" stroke="#6b4b2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M118 30 C130 16 156 18 160 28 C150 42 130 42 118 30Z" fill="#3f8f5a"/>
+    <circle cx="68" cy="145" r="30" fill="#b8324f"/>
+    <circle cx="136" cy="138" r="30" fill="#d9483b"/>
+    <circle cx="58" cy="135" r="7" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="126" cy="128" r="7" fill="rgba(255,255,255,0.35)"/></g>
+</svg>

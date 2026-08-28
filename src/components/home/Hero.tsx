@@ -12,16 +12,19 @@ export default function Hero() {
       aria-labelledby="hero-title"
       className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8 lg:pt-14"
     >
-      <div className="relative overflow-hidden rounded-[2rem] bg-brand-gradient text-white shadow-lg">
+      <div className="bg-brand-gradient relative overflow-hidden rounded-[2rem] text-white shadow-lg">
         {/* Halo décoratif (aria-hidden : purement visuel). */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-24 -right-24 size-80 rounded-full bg-accent-lemon/30 blur-3xl"
+          className="bg-accent-lemon/30 pointer-events-none absolute -top-24 -right-24 size-80 rounded-full blur-3xl"
         />
         <div className="relative grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:p-16">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium backdrop-blur">
-              <span aria-hidden="true" className="size-2 rounded-full bg-accent-lemon" />
+              <span
+                aria-hidden="true"
+                className="bg-accent-lemon size-2 rounded-full"
+              />
               Livraison en vélo-cargo, du lundi au samedi
             </p>
             <h1
@@ -32,13 +35,13 @@ export default function Hero() {
               <br className="hidden sm:block" /> livrés le jour de la récolte.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/85 sm:text-xl">
-              FIG sélectionne chaque semaine le meilleur des producteurs de votre
-              région et vous le livre à domicile, sans emballage superflu.
+              FIG sélectionne chaque semaine le meilleur des producteurs de
+              votre région et vous le livre à domicile, sans emballage superflu.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/catalogue"
-                className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-white px-7 text-base font-semibold text-primary-dark shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                className="text-primary-dark inline-flex h-13 items-center justify-center gap-2 rounded-full bg-white px-7 text-base font-semibold shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
                 Voir le catalogue
                 <ArrowRightIcon className="size-4" />

@@ -12,16 +12,18 @@ export default function Logo({ size = "md" }: { size?: "md" | "lg" }) {
   return (
     <Link
       href="/"
-      className="inline-flex items-center gap-2.5 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      className="focus-visible:outline-primary inline-flex items-center gap-2.5 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4"
       aria-label={`${siteName}, retour à l'accueil`}
     >
       <span
         aria-hidden="true"
-        className={`flex items-center justify-center rounded-full bg-brand-gradient font-bold text-white ${markSize}`}
+        className={`bg-brand-gradient flex items-center justify-center rounded-full font-bold text-white ${markSize}`}
       >
         F
       </span>
-      <span className={`font-bold tracking-tight text-primary-dark ${textSize}`}>
+      <span
+        className={`text-primary-dark font-bold tracking-tight ${textSize}`}
+      >
         {siteName}
       </span>
     </Link>

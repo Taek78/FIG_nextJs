@@ -40,7 +40,10 @@ export default function SeasonalProducts() {
           eyebrow={`De saison en ${MONTH_NAMES[CURRENT_MONTH]}`}
           title="Au sommet de leur saison"
           description="Récoltés à maturité, ces fruits et légumes sont au meilleur de leur goût et de leur prix."
-          link={{ label: "Tous les produits de saison", href: "/catalogue?seasonal=true" }}
+          link={{
+            label: "Tous les produits de saison",
+            href: "/catalogue?seasonal=true",
+          }}
         />
         <ProductGrid products={selection} />
       </div>

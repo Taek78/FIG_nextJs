@@ -34,18 +34,24 @@ export default function MobileMenu({ links }: { links: NavLink[] }) {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-controls={panelId}
-        className="inline-flex size-11 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        className="text-text hover:bg-primary/10 focus-visible:outline-primary inline-flex size-11 items-center justify-center rounded-full transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
       >
         {/* sr-only : texte lu par les lecteurs d'écran mais invisible à l'écran. */}
-        <span className="sr-only">{open ? "Fermer le menu" : "Ouvrir le menu"}</span>
-        {open ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+        <span className="sr-only">
+          {open ? "Fermer le menu" : "Ouvrir le menu"}
+        </span>
+        {open ? (
+          <CloseIcon className="size-6" />
+        ) : (
+          <MenuIcon className="size-6" />
+        )}
       </button>
 
       {open && (
         <nav
           id={panelId}
           aria-label="Navigation mobile"
-          className="absolute inset-x-0 top-full border-b border-border bg-surface shadow-lg"
+          className="border-border bg-surface absolute inset-x-0 top-full border-b shadow-lg"
         >
           <ul className="mx-auto flex max-w-7xl flex-col gap-1 p-4">
             {links.map((link) => (
@@ -53,7 +59,7 @@ export default function MobileMenu({ links }: { links: NavLink[] }) {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-lg font-medium transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="hover:bg-primary/10 focus-visible:outline-primary block rounded-xl px-4 py-3 text-lg font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   {link.label}
                 </Link>

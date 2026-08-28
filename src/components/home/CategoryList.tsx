@@ -24,9 +24,9 @@ export default function CategoryList() {
           <li key={category.id}>
             <Link
               href={category.href}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="group border-border bg-surface focus-visible:outline-primary flex h-full flex-col overflow-hidden rounded-3xl border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <div className="relative aspect-4/3 overflow-hidden bg-background">
+              <div className="bg-background relative aspect-4/3 overflow-hidden">
                 <Image
                   src={category.image}
                   alt={category.imageAlt}
@@ -36,10 +36,12 @@ export default function CategoryList() {
                 />
               </div>
               <div className="p-5">
-                <span className="block text-lg font-semibold group-hover:text-primary-dark">
+                <span className="group-hover:text-primary-dark block text-lg font-semibold">
                   {category.name}
                 </span>
-                <span className="mt-1 block text-sm text-muted">{category.description}</span>
+                <span className="text-muted mt-1 block text-sm">
+                  {category.description}
+                </span>
               </div>
             </Link>
           </li>

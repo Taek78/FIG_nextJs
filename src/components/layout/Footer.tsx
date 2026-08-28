@@ -8,15 +8,19 @@ import Logo from "@/components/layout/Logo";
  */
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-border bg-surface">
+    <footer className="border-border bg-surface mt-auto border-t">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-20">
         <div className="lg:col-span-4">
           <Logo size="lg" />
-          <p className="mt-4 text-base text-muted">{siteTagline}.</p>
-          <p className="mt-2 max-w-sm text-sm text-muted">
-            Recevez chaque semaine le calendrier de saison et nos idées de recettes.
+          <p className="text-muted mt-4 text-base">{siteTagline}.</p>
+          <p className="text-muted mt-2 max-w-sm text-sm">
+            Recevez chaque semaine le calendrier de saison et nos idées de
+            recettes.
           </p>
-          <form action="/newsletter" className="mt-6 flex max-w-sm flex-col gap-2 sm:flex-row">
+          <form
+            action="/newsletter"
+            className="mt-6 flex max-w-sm flex-col gap-2 sm:flex-row"
+          >
             <label htmlFor="newsletter-email" className="sr-only">
               Votre adresse e-mail
             </label>
@@ -26,11 +30,11 @@ export default function Footer() {
               type="email"
               required
               placeholder="votre@email.fr"
-              className="h-12 flex-1 rounded-full border border-border bg-background px-5 text-sm placeholder:text-muted focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="border-border bg-background placeholder:text-muted focus:border-primary focus-visible:ring-primary/40 h-12 flex-1 rounded-full border px-5 text-sm focus:outline-none focus-visible:ring-2"
             />
             <button
               type="submit"
-              className="h-12 rounded-full bg-primary px-6 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="bg-primary hover:bg-primary-dark focus-visible:outline-primary h-12 rounded-full px-6 text-sm font-semibold text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               S&apos;abonner
             </button>
@@ -43,13 +47,15 @@ export default function Footer() {
         >
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h2 className="text-sm font-semibold tracking-wide uppercase">{column.title}</h2>
+              <h2 className="text-sm font-semibold tracking-wide uppercase">
+                {column.title}
+              </h2>
               <ul className="mt-5 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-base text-muted transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      className="text-muted hover:text-primary focus-visible:outline-primary text-base transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
                     >
                       {link.label}
                     </Link>
@@ -61,15 +67,15 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <div className="border-border border-t">
+        <div className="text-muted mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© 2026 {siteName}. Fruits et légumes livrés avec soin.</p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {legalLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="hover:text-primary focus-visible:outline-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   {link.label}
                 </Link>

@@ -26,19 +26,24 @@ export default function SectionHeading({
     <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-2xl">
         {eyebrow && (
-          <p className="mb-2 text-sm font-semibold tracking-wide text-primary uppercase">
+          <p className="text-primary mb-2 text-sm font-semibold tracking-wide uppercase">
             {eyebrow}
           </p>
         )}
-        <h2 id={id} className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2
+          id={id}
+          className="text-3xl font-semibold tracking-tight sm:text-4xl"
+        >
           {title}
         </h2>
-        {description && <p className="mt-3 text-lg text-muted">{description}</p>}
+        {description && (
+          <p className="text-muted mt-3 text-lg">{description}</p>
+        )}
       </div>
       {link && (
         <Link
           href={link.href}
-          className="inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1.5 font-medium text-primary transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:self-auto"
+          className="text-primary hover:bg-primary/10 focus-visible:outline-primary inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1.5 font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 sm:self-auto"
         >
           {link.label}
           <ArrowRightIcon className="size-4" />

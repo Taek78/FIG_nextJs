@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Lien d'évitement : invisible sauf au focus clavier, il permet de sauter directement au contenu. */}
         <a
           href="#contenu"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
+          className="focus:bg-primary sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:px-4 focus:py-2 focus:text-white"
         >
           Aller au contenu
         </a>

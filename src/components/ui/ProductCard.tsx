@@ -11,13 +11,13 @@ export default function ProductCard({ product }: { product: Product }) {
   const unavailable = !product.available;
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface shadow-sm transition-shadow duration-300 hover:shadow-lg focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2">
+    <article className="group border-border bg-surface focus-within:ring-primary relative flex h-full flex-col overflow-hidden rounded-3xl border shadow-sm transition-shadow duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-lg">
       {/*
         next/image optimise le chargement (lazy, dimensions réservées → pas de saut de mise en page).
         `fill` remplit le conteneur parent positionné (relative + aspect-square = ratio 1:1 uniforme).
         `sizes` indique la largeur réelle de l'image selon l'écran pour choisir la bonne résolution.
       */}
-      <div className="relative aspect-square overflow-hidden bg-background">
+      <div className="bg-background relative aspect-square overflow-hidden">
         <Image
           src={product.image}
           alt={product.imageAlt}
@@ -31,12 +31,12 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Badges : bio (vert) et indisponible (gris). Ils restent lisibles pour tous. */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {product.organic && (
-            <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold text-white shadow-sm">
+            <span className="bg-primary rounded-full px-2.5 py-1 text-xs font-semibold text-white shadow-sm">
               Bio
             </span>
           )}
           {unavailable && (
-            <span className="rounded-full bg-text/80 px-2.5 py-1 text-xs font-semibold text-white">
+            <span className="bg-text/80 rounded-full px-2.5 py-1 text-xs font-semibold text-white">
               Indisponible
             </span>
           )}
@@ -44,7 +44,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex flex-1 flex-col gap-1 p-5">
-        <p className="text-sm text-muted">
+        <p className="text-muted text-sm">
           {product.variety} · {product.origin}
         </p>
         <h3 className="text-lg leading-snug font-semibold">
@@ -60,10 +60,10 @@ export default function ProductCard({ product }: { product: Product }) {
           </Link>
         </h3>
         <p className="mt-auto flex items-baseline gap-1.5 pt-3">
-          <span className="text-xl font-semibold text-primary-dark">
+          <span className="text-primary-dark text-xl font-semibold">
             {formatPrice(product.price)}
           </span>
-          <span className="text-sm text-muted">{formatUnit(product.unit)}</span>
+          <span className="text-muted text-sm">{formatUnit(product.unit)}</span>
         </p>
       </div>
     </article>

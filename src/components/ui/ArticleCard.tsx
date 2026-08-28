@@ -1,55 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Article } from "../../types/site";
+import type { Article } from "@/types/site";
+import { formatDate } from "@/utils/format";
 
-type ArticleCardProps = {
-  article: Article;
-};
-
-export default function ArticleCard({ article }: ArticleCardProps) {
+/*
+ * Carte article, alignée sur ProductCard : mêmes tokens de couleur, même rayon,
+ * et surtout UN SEUL lien par carte. `after:absolute after:inset-0` étend la zone
+ * cliquable du titre à toute la carte (l'<article> est en `relative`), ce qui évite
+ * d'annoncer deux fois la même destination aux lecteurs d'écran.
+ */
+export default function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <Link
-        href={article.href}
-        className="relative block aspect-[3/2] overflow-hidden"
-      >
+    <article className="group border-border bg-surface focus-within:ring-primary relative flex h-full flex-col overflow-hidden rounded-3xl border shadow-sm transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg">
+      <div className="bg-background relative aspect-3/2 overflow-hidden">
+        {/* `sizes` suit la grille d'ArticleGrid : 1 colonne, puis 2 dès sm, puis 3 dès lg. */}
         <Image
           src={article.image}
           alt={article.imageAlt}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-      </Link>
+      </div>
 
-      <div className="flex flex-col gap-4 p-6">
-        <span className="w-fit rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
+      <div className="flex flex-1 flex-col gap-4 p-6">
+        <span className="bg-primary/10 text-primary-dark w-fit rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase">
           {article.topic}
         </span>
 
-        <h3 className="text-xl font-bold leading-snug text-gray-900">
+        <h3 className="text-xl leading-snug font-semibold">
           <Link
-            href={article.href}
-            className="transition-colors hover:text-green-700"
+            href={`/actualites/${article.slug}`}
+            className="after:absolute after:inset-0 focus-visible:outline-none"
           >
             {article.title}
           </Link>
         </h3>
 
-        <p className="line-clamp-3 text-sm leading-6 text-gray-600">
+        <p className="text-muted line-clamp-3 text-sm leading-6">
           {article.excerpt}
         </p>
 
-        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
-          <time dateTime={article.date}>
-            {new Intl.DateTimeFormat("fr-FR", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            }).format(new Date(article.date))}
-          </time>
-
-          <span>{article.readingTime}</span>
+        <div className="border-border text-muted mt-auto flex items-center justify-between border-t pt-4 text-xs">
+          {/* `dateTime` donne la date lisible par une machine, le texte la version française. */}
+          <time dateTime={article.date}>{formatDate(article.date)}</time>
+          <span>{article.readingMinutes} min de lecture</span>
         </div>
       </div>
     </article>

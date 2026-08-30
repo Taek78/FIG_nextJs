@@ -18,7 +18,7 @@
  */
 import type { Product } from "@/types/product";
 import type { CartItem, CartLine, CartSummary, OrderUnit } from "@/types/cart";
-
+import { ORDER_UNITS } from "@/types/cart";
 /** 20 kg, en grammes. Plafond par ligne pour un produit vendu au poids. */
 export const MAX_GRAMS_PER_LINE = 20_000;
 
@@ -30,6 +30,9 @@ export const FREE_DELIVERY_THRESHOLD_CENTS = 3_500;
 
 /** Frais de port en deçà du seuil : 4,90 €. */
 export const DELIVERY_FEE_CENTS = 490;
+
+/** Un cookie plafonne à ~4 Ko ; une ligne pèse ~60 octets en JSON. */
+export const MAX_CART_LINES = 50;
 
 /**
  * 2.3 € → 230 centimes.
@@ -76,7 +79,30 @@ export function addLine(
   orderUnit: OrderUnit,
   maxQuantity: number,
 ): CartLine[] {
-  throw new Error("addLine : à implémenter");
+  if (!Number.isInteger(quantity) || quantity <= 0) {
+    return lines;
+  }
+
+  const lineExist = lines.some((line) => line.productId === productId);
+
+  if (lineExist) {
+    return lines.map((line) => {
+      if (line.productId === productId) {
+        const newQuantity = Math.min(line.quantity + quantity, maxQuantity);
+        return { ...line, quantity: newQuantity };
+      }
+      return line;
+    });
+  }
+
+  return [
+    ...lines,
+    {
+      productId,
+      quantity: Math.min(quantity, maxQuantity),
+      orderUnit,
+    },
+  ];
 }
 
 /**
@@ -97,7 +123,26 @@ export function setLineQuantity(
   quantity: number,
   maxQuantity: number,
 ): CartLine[] {
-  throw new Error("setLineQuantity : à implémenter");
+  if (!Number.isInteger(quantity)) {
+    return lines;
+  }
+  if (quantity <= 0) {
+    return removeLine(lines, productId);
+  }
+
+  const lineExist = lines.find((line) => line.productId === productId);
+  if (!lineExist) {
+    return lines;
+  }
+  const newQuantity = Math.min(quantity, maxQuantity);
+
+  if (lineExist.quantity === newQuantity) {
+    return lines;
+  }
+
+  return lines.map((line) =>
+    productId === line.productId ? { ...line, quantity: newQuantity } : line,
+  );
 }
 
 /**
@@ -105,7 +150,7 @@ export function setLineQuantity(
  * Un `filter` suffit.
  */
 export function removeLine(lines: CartLine[], productId: string): CartLine[] {
-  throw new Error("removeLine : à implémenter");
+  return lines.filter((line) => line.productId !== productId);
 }
 
 /**
@@ -127,7 +172,28 @@ export function hydrateCart(
   lines: CartLine[],
   products: Product[],
 ): CartItem[] {
-  throw new Error("hydrateCart : à implémenter");
+  const productMap = new Map(products.map((p) => [p.id, p]));
+
+  return lines.flatMap((line) => {
+    const product = productMap.get(line.productId);
+    if (!product) {
+      return [];
+    }
+
+    const lineTotalCents = Math.round(
+      (toCents(product.price) * line.quantity) / baseQuantityFor(product),
+    );
+
+    return [
+      {
+        product,
+        quantity: line.quantity,
+        orderUnit: line.orderUnit,
+        lineTotalCents,
+        unavailable: !product.available,
+      },
+    ];
+  });
 }
 
 /**
@@ -148,5 +214,78 @@ export function hydrateCart(
  *     lève un TypeError, et le panier vide est justement ce cas.
  */
 export function summarize(items: CartItem[]): CartSummary {
-  throw new Error("summarize : à implémenter");
+  if (items.length === 0) {
+    return {
+      items: [],
+      itemCount: 0,
+      subtotalCents: 0,
+      deliveryCents: 0,
+      totalCents: 0,
+    };
+  }
+
+  const subtotalCents = items.reduce((acc, item) => {
+    if (!item.unavailable) {
+      return acc + item.lineTotalCents;
+    }
+    return acc;
+  }, 0);
+
+  const delivery =
+    subtotalCents >= FREE_DELIVERY_THRESHOLD_CENTS ? 0 : DELIVERY_FEE_CENTS;
+
+  const total = subtotalCents + delivery;
+
+  //count ne compte que les lignes commandables, pas les indisponibles.
+  //motif : les items indisponibles ne seront jamais facturés ni livré : donc pas de panier.
+  const count = items.reduce((acc, item) => {
+    if (!item.unavailable) {
+      return acc + 1;
+    }
+    return acc;
+  }, 0);
+
+  return {
+    items,
+    itemCount: count,
+    subtotalCents,
+    deliveryCents: delivery,
+    totalCents: total,
+  };
+}
+
+/**
+ * Vrai si `value` a exactement la forme d'une CartLine.
+ * Niveau LIGNE : cette fonction juge UN candidat, jamais une collection.
+ * Le `as` de la ligne 2 est une hypothèse immédiatement vérifiée par les
+ * conditions qui suivent — c'est le seul endroit où un `as` est légitime.
+ */
+export function isCartLine(value: unknown): value is CartLine {
+  if (value === null || typeof value !== "object") {
+    return false;
+  }
+  const candidate = value as Record<string, unknown>;
+
+  return (
+    typeof candidate.productId === "string" &&
+    candidate.productId.trim().length > 0 &&
+    typeof candidate.quantity === "number" &&
+    Number.isInteger(candidate.quantity) &&
+    candidate.quantity > 0 &&
+    typeof candidate.orderUnit === "string" &&
+    (ORDER_UNITS as readonly string[]).includes(candidate.orderUnit)
+  );
+}
+
+/**
+ * Transforme une valeur inconnue (sortie de JSON.parse) en panier sûr.
+ * Niveau TABLEAU : borne puis filtre, en déléguant le jugement de chaque
+ * ligne à isCartLine. Le slice AVANT le filter : sur une entrée hostile
+ * de 10 000 lignes, on borne le travail avant de le faire.
+ */
+export function parseCartLines(raw: unknown): CartLine[] {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+  return raw.slice(0, MAX_CART_LINES).filter(isCartLine);
 }

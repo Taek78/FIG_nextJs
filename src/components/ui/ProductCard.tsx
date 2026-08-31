@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/product";
 import { formatPrice, formatUnit } from "@/utils/format";
+import AddToCartForm from "../cart/AddToCartForm";
 
 /*
  * Carte produit réutilisée par les sections "de saison" et "bio".
@@ -65,6 +66,9 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
           <span className="text-muted text-sm">{formatUnit(product.unit)}</span>
         </p>
+        {!unavailable && (
+          <AddToCartForm productId={product.id} productName={product.name} />
+        )}
       </div>
     </article>
   );

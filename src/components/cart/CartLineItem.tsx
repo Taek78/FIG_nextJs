@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CartItem } from "@/types/cart";
+import { removeFromCart, setQuantity } from "@/lib/cartActions";
 import {
   formatPrice,
   formatPriceFromCents,
@@ -8,20 +9,29 @@ import {
   formatUnit,
 } from "@/utils/format";
 import { MinusIcon, PlusIcon, TrashIcon } from "@/components/ui/icons";
+import type { ProductUnit } from "@/types/product";
 
 /*
- * Une ligne du panier. Server Component : purement présentatif.
+ * Une ligne du panier, branchée sur les Server Actions.
  *
- * Les boutons (− / + / retirer) sont rendus mais DÉSACTIVÉS tant que les
- * Server Actions n'existent pas (phase 3) : un bouton visiblement inerte vaut
- * mieux qu'un bouton qui a l'air actif et ne fait rien. Ils deviendront alors
- * des <form action={…}> — la structure visuelle, elle, ne bougera plus.
+ * UN MINI-<form> PAR BOUTON, et non un formulaire unique avec `formAction` +
+ * name/value sur les boutons : quand `formAction` est une FONCTION, React 19
+ * réquisitionne le canal nom/valeur du bouton pour encoder l'action et ne
+ * transmet PAS la paire name/value du bouton dans le FormData (vérifié sur le
+ * HTML rendu : l'attribut name des boutons est retiré). Les <input hidden>,
+ * eux, passent toujours — chaque bouton embarque donc ses propres champs.
  */
 const stepperButtonClass =
-  "inline-flex size-9 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:bg-transparent";
+  "inline-flex size-9 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
+
+const QUANTITY_STEP: Record<ProductUnit, number> = {
+  kg: 300, // en g jusqu'à 1000 puis passe en kg
+  piece: 1,
+};
 
 export default function CartLineItem({ item }: { item: CartItem }) {
   const { product } = item;
+  const step = QUANTITY_STEP[product.unit];
 
   return (
     <li className="flex gap-4 p-5 sm:gap-5">
@@ -59,34 +69,42 @@ export default function CartLineItem({ item }: { item: CartItem }) {
             Indisponible — non compté dans le total.
           </p>
         ) : (
-          /* Compteur − / quantité / + : la quantité est affichée dans l'unité
-             choisie par la maquette (g bascule en kg dès 1000). */
+          /* Compteur − / quantité / + : les nouvelles quantités sont calculées
+             AU RENDU, côté serveur ; le client ne fait que choisir un bouton.
+             `quantity - step` peut atteindre 0 : setLineQuantity retire alors
+             la ligne — le contrat « 0 supprime » de la phase 1 sert ici. */
           <div className="border-border bg-background mt-3 inline-flex items-center gap-1 rounded-full border p-0.5">
-            <button
-              type="button"
-              disabled
-              title="Bientôt disponible"
-              className={stepperButtonClass}
-            >
-              <span className="sr-only">
-                Diminuer la quantité de {product.name}
-              </span>
-              <MinusIcon className="size-4" />
-            </button>
+            <form action={setQuantity}>
+              <input type="hidden" name="productId" value={product.id} />
+              <input
+                type="hidden"
+                name="quantity"
+                value={item.quantity - step}
+              />
+              <button type="submit" className={stepperButtonClass}>
+                <span className="sr-only">
+                  Diminuer la quantité de {product.name}
+                </span>
+                <MinusIcon className="size-4" />
+              </button>
+            </form>
             <span className="min-w-16 text-center text-sm font-semibold tabular-nums">
               {formatQuantity(item.quantity, product.unit)}
             </span>
-            <button
-              type="button"
-              disabled
-              title="Bientôt disponible"
-              className={stepperButtonClass}
-            >
-              <span className="sr-only">
-                Augmenter la quantité de {product.name}
-              </span>
-              <PlusIcon className="size-4" />
-            </button>
+            <form action={setQuantity}>
+              <input type="hidden" name="productId" value={product.id} />
+              <input
+                type="hidden"
+                name="quantity"
+                value={item.quantity + step}
+              />
+              <button type="submit" className={stepperButtonClass}>
+                <span className="sr-only">
+                  Augmenter la quantité de {product.name}
+                </span>
+                <PlusIcon className="size-4" />
+              </button>
+            </form>
           </div>
         )}
       </div>
@@ -102,16 +120,17 @@ export default function CartLineItem({ item }: { item: CartItem }) {
             {formatPriceFromCents(item.lineTotalCents)}
           </span>
         )}
-        <button
-          type="button"
-          disabled
-          title="Bientôt disponible"
-          className="text-muted hover:text-accent-berry focus-visible:outline-primary inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          <TrashIcon className="size-4" />
-          Retirer
-          <span className="sr-only"> {product.name} du panier</span>
-        </button>
+        <form action={removeFromCart}>
+          <input type="hidden" name="productId" value={product.id} />
+          <button
+            type="submit"
+            className="text-muted hover:text-accent-berry focus-visible:outline-primary inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <TrashIcon className="size-4" />
+            Retirer
+            <span className="sr-only"> {product.name} du panier</span>
+          </button>
+        </form>
       </div>
     </li>
   );

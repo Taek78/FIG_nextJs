@@ -275,9 +275,9 @@ describe("summarize", () => {
 
 describe("isCartLine", () => {
   it("accepte une ligne bien formée", () => {
-    expect(isCartLine({ productId: "v05", quantity: 500, orderUnit: "g" })).toBe(
-      true,
-    );
+    expect(
+      isCartLine({ productId: "v05", quantity: 500, orderUnit: "g" }),
+    ).toBe(true);
   });
 
   it.each([

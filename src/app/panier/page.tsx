@@ -4,20 +4,17 @@ import { hydrateCart, summarize } from "@/utils/cart";
 import CartLineItem from "@/components/cart/CartLineItem";
 import CartSummaryPanel from "@/components/cart/CartSummaryPanel";
 import EmptyCart from "@/components/cart/EmptyCart";
-import { readCart } from "@/lib/cartStorage"
+import { readCart } from "@/lib/cartStorage";
 
 export const metadata: Metadata = {
   title: "Panier — FIG",
   description: "Votre panier de fruits et légumes frais.",
 };
 
-
-
 export default async function Panier() {
-  const lines = await readCart()
+  const lines = await readCart();
   const summary = summarize(hydrateCart(lines, products));
   const isEmpty = summary.items.length === 0;
-  
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">

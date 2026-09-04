@@ -38,8 +38,8 @@ import type { Product } from "@/types/product";
  * TypeScript ne peut pas l'interdire (la contrainte vient du produit, pas de l'unité),
  * c'est donc vérifié à l'exécution, côté serveur, avant d'écrire dans le panier.
  */
-export const ORDER_UNITS = ["kg", "g", "piece"] as const
-export type OrderUnit = (typeof ORDER_UNITS)[number] //
+export const ORDER_UNITS = ["kg", "g", "piece"] as const;
+export type OrderUnit = (typeof ORDER_UNITS)[number]; //
 
 /** Ce qui est réellement persisté dans le cookie : le strict minimum. */
 export type CartLine = {
@@ -60,7 +60,7 @@ export type CartItem = {
   /** Le produit est au panier mais n'est plus commandable : affiché, exclu du total. */
   unavailable: boolean;
   /** Unité choisie par le client, reprise de la ligne. Sert à afficher « 500 g » ou « 0,5 kg ». */
-  orderUnit: OrderUnit
+  orderUnit: OrderUnit;
 };
 
 export type CartSummary = {

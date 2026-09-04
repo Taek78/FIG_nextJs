@@ -153,21 +153,6 @@ export function removeLine(lines: CartLine[], productId: string): CartLine[] {
   return lines.filter((line) => line.productId !== productId);
 }
 
-/**
- * Jointure lignes × catalogue. Seule fonction du module à connaître les produits.
- *
- * À implémenter :
- *  1. Indexer le catalogue : `new Map(products.map((p) => [p.id, p]))`.
- *     À 32 produits, un `find()` dans la boucle serait tout aussi rapide — c'est
- *     une habitude prise avant que ça compte, pas une optimisation. Le dire, plutôt
- *     que de prétendre optimiser.
- *  2. Écarter les lignes orphelines (productId inconnu du catalogue) : `flatMap`
- *     filtre et transforme en une passe. Ne jamais produire `product: undefined`.
- *  3. lineTotalCents = Math.round(toCents(product.price) * quantity / baseQuantityFor(product))
- *     Arrondir UNE SEULE FOIS, ici. Courgette à 2,30 €/kg, 500 g → 230 × 500 / 1000 = 115.
- *  4. unavailable = !product.available — la ligne reste visible, mais hors total.
- *  5. Conserver l'ordre du panier, pas celui du catalogue.
- */
 export function hydrateCart(
   lines: CartLine[],
   products: Product[],

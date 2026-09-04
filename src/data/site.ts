@@ -10,9 +10,6 @@ import type { Benefit, FooterColumn, NavLink } from "@/types/site";
 export const siteName = "FIG";
 export const siteTagline = "Fruits et légumes frais, livrés chez vous";
 
-/** Nombre d'articles dans le panier fictif (pas de vrai panier pour l'instant). */
-export const cartCount = 3;
-
 export const mainNav: NavLink[] = [
   { label: "Accueil", href: "/" },
   { label: "Catalogue", href: "/catalogue" },

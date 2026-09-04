@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { cartCount, mainNav } from "@/data/site";
+import { mainNav } from "@/data/site";
 import Logo from "@/components/layout/Logo";
 import MobileMenu from "@/components/layout/MobileMenu";
-import { CartIcon, SearchIcon, UserIcon } from "@/components/ui/icons";
+import { SearchIcon, UserIcon } from "@/components/ui/icons";
+import CartBadge from "@/components/cart/CartBadge";
 
 /*
  * En-tête du site (Server Component). Il inclut MobileMenu, qui est un Client Component :
@@ -58,7 +59,7 @@ export default function Header() {
           </div>
         </form>
 
-        {/* Actions : recherche (mobile), compte, panier fictif. */}
+        {/* Actions : recherche (mobile), compte, panier */}
         <div className="ml-auto flex items-center gap-1 sm:ml-2">
           <Link href="/catalogue" className={`${iconButtonClass} sm:hidden`}>
             <span className="sr-only">Rechercher</span>
@@ -68,22 +69,7 @@ export default function Header() {
             <span className="sr-only">Mon compte</span>
             <UserIcon className="size-5" />
           </Link>
-          <Link
-            href="/panier"
-            className={iconButtonClass}
-            // Le lecteur d'écran lit "Panier, 3 articles" ; la pastille visuelle est donc masquée (aria-hidden).
-            aria-label={`Panier, ${cartCount} article${cartCount > 1 ? "s" : ""}`}
-          >
-            <CartIcon className="size-5" />
-            {cartCount > 0 && (
-              <span
-                aria-hidden="true"
-                className="bg-accent-orange absolute -top-0.5 -right-0.5 flex size-5 items-center justify-center rounded-full text-[11px] font-bold text-white"
-              >
-                {cartCount}
-              </span>
-            )}
-          </Link>
+          <CartBadge className={iconButtonClass} />
         </div>
       </div>
     </header>

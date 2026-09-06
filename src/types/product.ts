@@ -34,4 +34,5 @@ export type Product = {
   imageAlt: string;
   /** Mois de pleine saison, de 1 (janvier) à 12 (décembre). */
   seasonMonths: number[];
+  description: string;
 };

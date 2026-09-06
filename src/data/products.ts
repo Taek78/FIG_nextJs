@@ -28,6 +28,7 @@ export const products: Product[] = [
     image: "/products/pomme-gala.svg",
     imageAlt: "Pomme Gala rouge avec sa feuille",
     seasonMonths: [8, 9, 10, 11, 12, 1, 2, 3],
+    description: "La pomme Gala est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau rouge striée de jaune et sa chair croquante."
   },
   {
     id: "f02",
@@ -45,6 +46,7 @@ export const products: Product[] = [
     image: "/products/poire-conference.svg",
     imageAlt: "Poire Conférence verte allongée",
     seasonMonths: [8, 9, 10, 11, 12, 1],
+    description: "La poire Conférence est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau verte allongée et sa chair croquante."
   },
   {
     id: "f03",
@@ -62,6 +64,7 @@ export const products: Product[] = [
     image: "/products/banane.svg",
     imageAlt: "Banane jaune mûre",
     seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    description: "La banane est un fruit tropical sucré et juteux, idéale pour les collations et les desserts. Elle se distingue par sa peau jaune mûre et sa chair douce."
   },
   {
     id: "f04",
@@ -79,6 +82,7 @@ export const products: Product[] = [
     image: "/products/orange.svg",
     imageAlt: "Orange entière avec une feuille",
     seasonMonths: [11, 12, 1, 2, 3, 4],
+    description: "L'orange à jus est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau orange et sa chair croquante."
   },
   {
     id: "f05",
@@ -96,6 +100,7 @@ export const products: Product[] = [
     image: "/products/citron.svg",
     imageAlt: "Citron jaune entier",
     seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    description: "Le citron jaune est un fruit acide et parfumé, idéale pour les collations et les desserts. Il se distingue par sa peau jaune et sa chair juteuse."
   },
   {
     id: "f06",
@@ -113,6 +118,7 @@ export const products: Product[] = [
     image: "/products/fraise.svg",
     imageAlt: "Fraise rouge avec sa collerette verte",
     seasonMonths: [4, 5, 6, 7],
+    description: "La fraise Gariguette est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau rouge et sa chair croquante."
   },
   {
     id: "f07",
@@ -130,6 +136,7 @@ export const products: Product[] = [
     image: "/products/framboise.svg",
     imageAlt: "Framboise rouge foncé",
     seasonMonths: [6, 7, 8, 9],
+    description: "La framboise est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau rouge foncé et sa chair croquante."
   },
   {
     id: "f08",
@@ -147,6 +154,7 @@ export const products: Product[] = [
     image: "/products/raisin.svg",
     imageAlt: "Grappe de raisin noir",
     seasonMonths: [8, 9, 10],
+    description: "Le raisin noir est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau noire et sa chair croquante."
   },
   {
     id: "f09",
@@ -164,6 +172,7 @@ export const products: Product[] = [
     image: "/products/peche.svg",
     imageAlt: "Pêche jaune veloutée",
     seasonMonths: [6, 7, 8, 9],
+    description: "La pêche jaune est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau jaune veloutée et sa chair croquante."
   },
   {
     id: "f10",
@@ -181,6 +190,7 @@ export const products: Product[] = [
     image: "/products/abricot.svg",
     imageAlt: "Abricot orangé",
     seasonMonths: [6, 7, 8],
+    description: "L'abricot est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau orangée et sa chair croquante."
   },
   {
     id: "f11",
@@ -198,6 +208,7 @@ export const products: Product[] = [
     image: "/products/cerise.svg",
     imageAlt: "Deux cerises rouges avec leurs queues",
     seasonMonths: [5, 6, 7],
+    description: "La cerise Burlat est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau rouge et sa chair croquante."
   },
   {
     id: "f12",
@@ -215,6 +226,7 @@ export const products: Product[] = [
     image: "/products/prune.svg",
     imageAlt: "Prune violette",
     seasonMonths: [7, 8, 9],
+    description: "La prune Reine-Claude est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau violette et sa chair croquante."
   },
   {
     id: "f13",
@@ -232,6 +244,7 @@ export const products: Product[] = [
     image: "/products/melon.svg",
     imageAlt: "Melon charentais à côtes vertes",
     seasonMonths: [6, 7, 8, 9],
+    description: "Le melon charentais est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau jaune et sa chair croquante."
   },
   {
     id: "f14",
@@ -249,6 +262,7 @@ export const products: Product[] = [
     image: "/products/pasteque.svg",
     imageAlt: "Tranche de pastèque rouge",
     seasonMonths: [7, 8, 9],
+    description: "La pastèque est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau verte et sa chair rouge."
   },
   {
     id: "f15",
@@ -266,6 +280,7 @@ export const products: Product[] = [
     image: "/products/kiwi.svg",
     imageAlt: "Kiwi entier et kiwi coupé en deux",
     seasonMonths: [11, 12, 1, 2, 3, 4],
+    description: "Le kiwi vert est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau brune et sa chair verte."
   },
   {
     id: "f16",
@@ -283,6 +298,7 @@ export const products: Product[] = [
     image: "/products/figue.svg",
     imageAlt: "Figue violette avec sa queue",
     seasonMonths: [8, 9, 10],
+    description: "La figue violette est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau violette et sa chair croquante."
   },
 
   // ---------- LÉGUMES ----------
@@ -302,6 +318,7 @@ export const products: Product[] = [
     image: "/products/carotte.svg",
     imageAlt: "Carotte orange avec ses fanes",
     seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    description: "La carotte des sables est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau orange et sa chair croquante."
   },
   {
     id: "v02",
@@ -319,6 +336,7 @@ export const products: Product[] = [
     image: "/products/tomate.svg",
     imageAlt: "Tomate rouge avec son pédoncule vert",
     seasonMonths: [6, 7, 8, 9],
+    description: "La tomate ronde est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau rouge et sa chair croquante."
   },
   {
     id: "v03",
@@ -336,6 +354,7 @@ export const products: Product[] = [
     image: "/products/courgette.svg",
     imageAlt: "Courgette verte allongée",
     seasonMonths: [5, 6, 7, 8, 9],
+    description: "La courgette verte est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau verte et sa chair croquante."
   },
   {
     id: "v04",
@@ -353,6 +372,7 @@ export const products: Product[] = [
     image: "/products/aubergine.svg",
     imageAlt: "Aubergine violette",
     seasonMonths: [6, 7, 8, 9],
+    description: "L'aubergine est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau violette et sa chair croquante."
   },
   {
     id: "v05",
@@ -370,6 +390,7 @@ export const products: Product[] = [
     image: "/products/poivron.svg",
     imageAlt: "Poivron rouge",
     seasonMonths: [6, 7, 8, 9, 10],
+    description: "Le poivron rouge est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau rouge et sa chair croquante."
   },
   {
     id: "v06",
@@ -387,6 +408,7 @@ export const products: Product[] = [
     image: "/products/concombre.svg",
     imageAlt: "Concombre vert",
     seasonMonths: [4, 5, 6, 7, 8, 9],
+    description: "Le concombre est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau verte et sa chair croquante."
   },
   {
     id: "v07",
@@ -404,6 +426,7 @@ export const products: Product[] = [
     image: "/products/laitue.svg",
     imageAlt: "Laitue verte pommée",
     seasonMonths: [4, 5, 6, 7, 8, 9, 10],
+    description: "La laitue batavia est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau verte et sa chair croquante."
   },
   {
     id: "v08",
@@ -421,6 +444,7 @@ export const products: Product[] = [
     image: "/products/poireau.svg",
     imageAlt: "Poireau blanc et vert",
     seasonMonths: [9, 10, 11, 12, 1, 2, 3, 4],
+    description: "Le poireau est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau blanche et sa chair croquante."
   },
   {
     id: "v09",
@@ -438,6 +462,7 @@ export const products: Product[] = [
     image: "/products/pomme-de-terre.svg",
     imageAlt: "Pomme de terre à chair ferme",
     seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    description: "La pomme de terre Charlotte est une variété sucrée et juteuse, idéale pour les collations et les desserts. Elle se distingue par sa peau beige et sa chair ferme."
   },
   {
     id: "v10",
@@ -455,6 +480,7 @@ export const products: Product[] = [
     image: "/products/oignon.svg",
     imageAlt: "Oignon jaune",
     seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    description: "L'oignon jaune est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau jaune et sa chair croquante."
   },
   {
     id: "v11",
@@ -472,6 +498,7 @@ export const products: Product[] = [
     image: "/products/ail.svg",
     imageAlt: "Tête d'ail blanche",
     seasonMonths: [7, 8, 9, 10, 11, 12, 1, 2],
+    description: "L'ail blanc est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau blanche et sa chair croquante."
   },
   {
     id: "v12",
@@ -489,6 +516,7 @@ export const products: Product[] = [
     image: "/products/brocoli.svg",
     imageAlt: "Tête de brocoli verte",
     seasonMonths: [6, 7, 8, 9, 10, 11],
+    description: "Le brocoli est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau verte et sa chair croquante."
   },
   {
     id: "v13",
@@ -506,6 +534,7 @@ export const products: Product[] = [
     image: "/products/chou-fleur.svg",
     imageAlt: "Chou-fleur blanc entouré de feuilles",
     seasonMonths: [9, 10, 11, 12, 1, 2, 3, 4],
+    description: "Le chou-fleur est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau blanche et sa chair croquante."
   },
   {
     id: "v14",
@@ -523,6 +552,7 @@ export const products: Product[] = [
     image: "/products/potimarron.svg",
     imageAlt: "Potimarron orange",
     seasonMonths: [9, 10, 11, 12, 1],
+    description: "Le potimarron est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau orange et sa chair croquante."
   },
   {
     id: "v15",
@@ -540,6 +570,7 @@ export const products: Product[] = [
     image: "/products/haricot-vert.svg",
     imageAlt: "Haricots verts fins",
     seasonMonths: [6, 7, 8, 9],
+    description: "L'haricot vert est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau verte et sa chair croquante."
   },
   {
     id: "v16",
@@ -557,5 +588,6 @@ export const products: Product[] = [
     image: "/products/radis.svg",
     imageAlt: "Radis rose et blanc avec ses feuilles",
     seasonMonths: [3, 4, 5, 6, 7, 8, 9, 10],
+    description: "Le radis rose est une variété sucrée et juteuse, idéale pour les collations et les desserts. Il se distingue par sa peau rose et sa chair croquante."
   },
 ];

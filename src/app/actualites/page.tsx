@@ -3,6 +3,11 @@ import { articles } from "@/data/articles";
 import { sortByDateDesc } from "@/utils/articles";
 import ArticleGrid from "@/components/ui/ArticleGrid";
 
+/*
+ * Page /actualites : la liste complète du magazine, du plus récent au plus
+ * ancien. Le tri appartient à la page (sortByDateDesc) : ArticleGrid affiche
+ * DANS L'ORDRE REÇU, comme partout.
+ */
 export const metadata: Metadata = {
   title: "Actualités — FIG",
   description:

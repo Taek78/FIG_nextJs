@@ -8,6 +8,11 @@ import {
 } from "@/components/ui/icons";
 
 /*
+ * Section « Pourquoi FIG » de l'accueil : les 4 avantages déclarés dans
+ * data/site.ts, purement présentatifs.
+ */
+
+/*
  * Table de correspondance clé → composant d'icône.
  * `Record<Benefit["icon"], …>` : si on ajoute une clé au type Benefit sans l'ajouter ici,
  * TypeScript refuse de compiler. Impossible d'oublier une icône.

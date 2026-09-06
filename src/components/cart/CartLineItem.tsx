@@ -24,8 +24,9 @@ import type { ProductUnit } from "@/types/product";
 const stepperButtonClass =
   "inline-flex size-9 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
+/** Pas d'incrément des steppers, dans l'unité de base du produit. */
 const QUANTITY_STEP: Record<ProductUnit, number> = {
-  kg: 300, // en g jusqu'à 1000 puis passe en kg
+  kg: 300, // grammes — l'affichage bascule en kg dès 1000 (formatQuantity)
   piece: 1,
 };
 

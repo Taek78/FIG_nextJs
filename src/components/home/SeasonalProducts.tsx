@@ -3,6 +3,11 @@ import { CURRENT_MONTH, getSeasonalProducts } from "@/utils/season";
 import ProductGrid from "@/components/ui/ProductGrid";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+/*
+ * Section « de saison » de l'accueil : jusqu'à 8 produits du mois courant
+ * (CURRENT_MONTH, utils/season.ts), indisponibles écartés de la vitrine.
+ */
+
 /* Libellés des mois, indexés de 1 à 12 (l'index 0 est vide pour aligner sur les numéros de mois). */
 const MONTH_NAMES = [
   "",

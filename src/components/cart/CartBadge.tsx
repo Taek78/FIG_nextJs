@@ -1,15 +1,21 @@
-//Server Component qui lit le cookie panier et réutilise le calcul de la page panier (même itemCount, jamais de divergence entre header et récapitulatif).
-//Conséquence : le layout dépend d'un cookie → toutes les pages sont rendues dynamiquement. Coût accepté en phase 0.
-//La mise à jour après « Ajouter » est assurée par revalidatePath("/", "layout") dans les actions — c'est pour ce composant que le "layout" existe.
+/*
+ * Badge panier du header : lit le cookie et réutilise le calcul de la page panier
+ * (même itemCount via summarize — jamais de divergence entre header et récapitulatif).
+ *
+ * Conséquence assumée (phase 0) : le layout dépend d'un cookie, toutes les pages
+ * sont donc rendues dynamiquement. La mise à jour après un ajout est assurée par
+ * revalidatePath("/", "layout") dans les Server Actions — c'est pour ce composant
+ * que le "layout" existe.
+ */
 
 import { products } from "@/data/products";
-
 import { readCart } from "@/lib/cartStorage";
 import { summarize, hydrateCart } from "@/utils/cart";
 import Link from "next/link";
 import { CartIcon } from "@/components/ui/icons";
 
-// { className }: { className?: string } car le style du bouton rond (iconButtonClass) appartient au Header, qui l'applique à ses trois icônes. Le badge ne doit pas le dupliquer — le parent le lui passe.
+/* Le style du bouton rond (iconButtonClass) appartient au Header, qui l'applique
+   à ses trois icônes : il l'injecte via `className` au lieu d'être dupliqué ici. */
 export default async function CartBadge({ className }: { className?: string }) {
   const lines = await readCart();
   const items = hydrateCart(lines, products);

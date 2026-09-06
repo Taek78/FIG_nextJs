@@ -3,9 +3,9 @@ import type { Product } from "@/types/product";
 import ProductGrid from "@/components/ui/ProductGrid";
 
 /*
- * Résultats du catalogue : la grille, ou un message quand un filtre ne renvoie rien.
- * (Anciennement ProductPage.tsx — le nom laissait croire à une page alors que c'est
- * une section rendue par app/catalogue/page.tsx.)
+ * Résultats du catalogue (section rendue par app/catalogue/page.tsx) : la
+ * grille, ou — quand un filtre ne renvoie rien — un message avec une porte de
+ * sortie vers le catalogue complet, pour ne jamais laisser d'impasse.
  */
 export default function ProductResults({ products }: { products: Product[] }) {
   if (products.length === 0) {

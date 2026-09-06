@@ -6,8 +6,9 @@ import { SearchIcon, UserIcon } from "@/components/ui/icons";
 import CartBadge from "@/components/cart/CartBadge";
 
 /*
- * En-tête du site (Server Component). Il inclut MobileMenu, qui est un Client Component :
- * un composant serveur peut tout à fait rendre un composant client.
+ * En-tête du site (Server Component). Il rend MobileMenu — un Client Component,
+ * qu'un composant serveur peut tout à fait rendre — et CartBadge, un Server
+ * Component async qui lit le cookie panier (voir ce fichier pour le coût).
  */
 const iconButtonClass =
   "relative inline-flex size-11 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";

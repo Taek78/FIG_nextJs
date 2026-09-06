@@ -9,6 +9,12 @@ import {
 import CategoryFilter from "@/components/catalog/CategoryFilter";
 import ProductResults from "@/components/catalog/ProductResults";
 
+/*
+ * Page /catalogue : l'URL est la source de vérité des filtres (partageable,
+ * navigable au clavier, sans JS). Lecture des paramètres et filtrage sont
+ * délégués à la couche pure (utils/catalog.ts), l'affichage à CategoryFilter
+ * et ProductResults.
+ */
 export const metadata: Metadata = {
   title: "Catalogue — FIG",
   description:

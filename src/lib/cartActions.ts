@@ -1,5 +1,17 @@
 "use server";
 
+/*
+ * Server Actions du panier — la FRONTIÈRE DE CONFIANCE.
+ *
+ * Tout ce qui arrive ici (FormData) vient du client et peut être forgé : chaque
+ * action revalide les types et l'existence du produit avant de toucher au cookie,
+ * puis délègue les règles de quantité à la couche pure (utils/cart.ts).
+ *
+ * Schéma commun : lire (readCart) → transformer (fonction pure) → écrire
+ * (writeCart) → revalidatePath("/", "layout"). Le "layout" n'est pas un excès :
+ * le badge panier vit dans le layout racine et doit être re-rendu après chaque
+ * modification.
+ */
 import { products } from "@/data/products";
 import type { OrderUnit } from "@/types/cart";
 import { readCart, writeCart } from "@/lib/cartStorage";
@@ -41,7 +53,6 @@ export async function addToCart(formData: FormData): Promise<void> {
   );
   await writeCart(next);
 
-  // Le badge du header vit dans le layout racine : on invalide tout l'arbre.
   revalidatePath("/", "layout");
 }
 export async function setQuantity(formData: FormData): Promise<void> {
@@ -52,10 +63,17 @@ export async function setQuantity(formData: FormData): Promise<void> {
     return;
   }
 
+  // Number("abc") → NaN : rejeté ensuite par les gardes « entier > 0 » de la couche pure.
   const quantity: number = Number(rawQuantity);
 
   const product = products.find((product) => productId === product.id);
 
+  /*
+   * Asymétrie voulue avec addToCart : ici seule l'EXISTENCE du produit est
+   * exigée, pas sa disponibilité — un client doit pouvoir réduire ou vider la
+   * ligne d'un produit devenu indisponible. Seul l'AJOUT exige un produit
+   * disponible.
+   */
   if (!product) {
     return;
   }
@@ -68,6 +86,10 @@ export async function setQuantity(formData: FormData): Promise<void> {
 
   revalidatePath("/", "layout");
 }
+/**
+ * Retire une ligne entière. Aucune vérification catalogue : retirer un produit,
+ * même disparu du catalogue, est toujours légitime.
+ */
 export async function removeFromCart(formData: FormData): Promise<void> {
   const productId = formData.get("productId");
   if (typeof productId !== "string") {
@@ -78,6 +100,5 @@ export async function removeFromCart(formData: FormData): Promise<void> {
   const next = removeLine(lines, productId);
   await writeCart(next);
 
-  // Le badge du header vit dans le layout racine : on invalide tout l'arbre.
   revalidatePath("/", "layout");
 }

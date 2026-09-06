@@ -6,6 +6,13 @@ import CartSummaryPanel from "@/components/cart/CartSummaryPanel";
 import EmptyCart from "@/components/cart/EmptyCart";
 import { readCart } from "@/lib/cartStorage";
 
+/*
+ * Page /panier : lit le cookie (readCart) puis déroule le pipeline pur
+ * hydrateCart → summarize ; aucune logique ici, la page orchestre.
+ * `isEmpty` se juge sur items.length (lignes affichées) et non sur itemCount
+ * (lignes commandables) : un panier ne contenant que de l'indisponible doit
+ * s'afficher, pas montrer l'état vide.
+ */
 export const metadata: Metadata = {
   title: "Panier — FIG",
   description: "Votre panier de fruits et légumes frais.",

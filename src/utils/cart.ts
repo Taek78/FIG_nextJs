@@ -60,13 +60,10 @@ export function maxQuantityFor(product: Product): number {
 /**
  * Ajoute une quantité au panier, en FUSIONNANT si le produit y est déjà.
  *
- * À implémenter :
- *  1. Ignorer silencieusement une quantité qui n'est pas un entier > 0 (renvoyer `lines`).
- *  2. Chercher la ligne existante par productId.
- *  3. Si elle existe : nouvelle quantité = ancienne + quantity, plafonnée à `maxQuantity`.
- *     Utiliser `map` (et non une affectation) pour conserver la POSITION de la ligne :
- *     réajouter un produit ne doit pas le faire sauter en bas du panier.
- *  4. Sinon : `[...lines, { productId, quantity, orderUnit }]`.
+ * - Quantité non entière ou <= 0 : ignorée silencieusement (renvoie `lines`).
+ * - Ligne existante : quantités additionnées, plafonnées à `maxQuantity`, via `map`
+ *   pour conserver la POSITION de la ligne (réajouter ne la fait pas sauter en bas).
+ * - Sinon : la ligne est ajoutée en fin de panier.
  *
  * @param quantity Dans l'unité de base du produit (grammes ou pièces).
  * @param maxQuantity Fourni par l'appelant via `maxQuantityFor` — c'est la seule façon
@@ -108,14 +105,14 @@ export function addLine(
 /**
  * REMPLACE la quantité d'une ligne (bouton − / +), au lieu de l'additionner.
  *
- * À implémenter :
- *  1. `quantity <= 0` → déléguer à `removeLine`, ne pas réécrire la suppression.
- *  2. Plafonner à `maxQuantity`.
- *  3. Produit absent du panier → renvoyer `lines` INCHANGÉ. Ne pas l'ajouter :
- *     c'est le travail d'addLine, et un « + » fantôme ne doit pas ressusciter
- *     un produit qu'on vient de retirer.
- *  4. Quand rien ne change, renvoyer la référence `lines` elle-même : React
- *     et useOptimistic sautent alors le rendu.
+ * - `quantity <= 0` : délègue à `removeLine` — le contrat « 0 supprime »,
+ *   exploité par le bouton − de CartLineItem.
+ * - Plafonne à `maxQuantity`.
+ * - Produit absent du panier : renvoie `lines` INCHANGÉ. L'ajouter serait le
+ *   travail d'addLine, et un « + » fantôme ne doit pas ressusciter un produit
+ *   qu'on vient de retirer.
+ * - Quand rien ne change, renvoie la référence `lines` elle-même : React et
+ *   useOptimistic sautent alors le rendu.
  */
 export function setLineQuantity(
   lines: CartLine[],
@@ -153,6 +150,18 @@ export function removeLine(lines: CartLine[], productId: string): CartLine[] {
   return lines.filter((line) => line.productId !== productId);
 }
 
+/**
+ * Jointure lignes × catalogue : CartLine[] → CartItem[]. Seule fonction du module
+ * à connaître les produits.
+ *
+ * - Catalogue indexé en Map — à 32 produits un `find` suffirait ; c'est une
+ *   habitude prise avant que ça compte, pas une optimisation.
+ * - `flatMap` écarte les lignes orphelines (productId inconnu) en une passe :
+ *   jamais de `product: undefined` en sortie.
+ * - lineTotalCents est arrondi UNE SEULE FOIS, ici : prix (centimes) × quantité ÷
+ *   quantité de base (courgette 2,30 €/kg, 500 g → 230 × 500 / 1000 = 115).
+ * - L'ordre du panier est conservé, pas celui du catalogue.
+ */
 export function hydrateCart(
   lines: CartLine[],
   products: Product[],
@@ -182,21 +191,17 @@ export function hydrateCart(
 }
 
 /**
- * Récapitulatif du panier.
+ * CartItem[] → CartSummary : le « bas de ticket », affiché par CartSummaryPanel.
  *
- * À implémenter :
- *  1. Panier vide → tout à zéro, FRAIS DE PORT COMPRIS. Le seuil de gratuité seul
- *     facturerait 4,90 € sur un panier sans rien.
- *  2. subtotalCents : somme des `lineTotalCents` des lignes commandables uniquement
- *     (exclure `unavailable`).
- *  3. deliveryCents : 0 si subtotalCents >= FREE_DELIVERY_THRESHOLD_CENTS, sinon
- *     DELIVERY_FEE_CENTS. Le seuil est inclusif — décision prise, à tester.
- *  4. totalCents = subtotalCents + deliveryCents.
- *  5. itemCount : additionner des grammes et des pièces n'a aucun sens. Compter le
- *     NOMBRE DE LIGNES commandables (« Panier, 3 articles ») est la seule règle
- *     cohérente ici. À figer par un test.
- *  6. Toujours passer la valeur initiale à `reduce` : `[].reduce((a, b) => a + b)`
- *     lève un TypeError, et le panier vide est justement ce cas.
+ * - Panier vide : tout à zéro, FRAIS DE PORT COMPRIS — le seuil de gratuité seul
+ *   facturerait 4,90 € sur un panier sans rien.
+ * - subtotalCents : somme des lignes commandables uniquement (`unavailable`
+ *   exclu : jamais facturé, jamais livré).
+ * - deliveryCents : 0 dès que FREE_DELIVERY_THRESHOLD_CENTS est atteint
+ *   (seuil INCLUSIF, figé par un test).
+ * - itemCount : nombre de LIGNES commandables — additionner des grammes et des
+ *   pièces n'aurait aucun sens. C'est le compte partagé par le badge du header
+ *   et le récapitulatif.
  */
 export function summarize(items: CartItem[]): CartSummary {
   if (items.length === 0) {
@@ -221,8 +226,6 @@ export function summarize(items: CartItem[]): CartSummary {
 
   const total = subtotalCents + delivery;
 
-  //count ne compte que les lignes commandables, pas les indisponibles.
-  //motif : les items indisponibles ne seront jamais facturés ni livré : donc pas de panier.
   const count = items.reduce((acc, item) => {
     if (!item.unavailable) {
       return acc + 1;

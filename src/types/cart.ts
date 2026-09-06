@@ -39,7 +39,7 @@ import type { Product } from "@/types/product";
  * c'est donc vérifié à l'exécution, côté serveur, avant d'écrire dans le panier.
  */
 export const ORDER_UNITS = ["kg", "g", "piece"] as const;
-export type OrderUnit = (typeof ORDER_UNITS)[number]; //
+export type OrderUnit = (typeof ORDER_UNITS)[number];
 
 /** Ce qui est réellement persisté dans le cookie : le strict minimum. */
 export type CartLine = {

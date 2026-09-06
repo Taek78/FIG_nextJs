@@ -1,7 +1,7 @@
 /*
  * Les quatre entrées de navigation du catalogue affichées sur l'accueil.
  * Les URL utilisent des paramètres de requête (?type=, ?seasonal=, ?organic=)
- * que la future page /catalogue pourra lire pour filtrer les produits.
+ * que la page /catalogue lit via parseCatalogFilters (utils/catalog.ts).
  */
 import type { Category } from "@/types/site";
 

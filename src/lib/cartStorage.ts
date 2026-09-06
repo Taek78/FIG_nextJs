@@ -51,6 +51,11 @@ export async function readCart(): Promise<CartLine[]> {
  * ⚠️ N'a d'appelant légitime que dans une Server Action ou un Route Handler :
  * pendant le rendu d'un composant, les en-têtes de réponse sont déjà partis
  * et Next lève « Cookies can only be modified in a Server Action… ».
+ *
+ * Concurrence : chaque écriture remplace le panier ENTIER. Deux requêtes
+ * simultanées (deux onglets) lisent le même état puis s'écrasent — dernière
+ * écriture gagne. Compromis assumé d'un panier cookie. Dans un même onglet,
+ * React met les actions en file et le cas ne se présente pas (vérifié).
  */
 export async function writeCart(lines: CartLine[]): Promise<void> {
   const store = await cookies();

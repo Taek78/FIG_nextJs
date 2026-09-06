@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/product";
 import { formatPrice, formatUnit } from "@/utils/format";
-import AddToCartForm from "../cart/AddToCartForm";
+import AddToCartForm from "@/components/cart/AddToCartForm";
 
 /*
- * Carte produit réutilisée par les sections "de saison" et "bio".
- * Server Component : aucune interaction, donc pas de "use client".
+ * Carte produit, réutilisée par l'accueil (sections « de saison » et « bio »)
+ * et le catalogue, toujours via ProductGrid. Server Component : la seule
+ * interactivité (état pending du bouton « Ajouter ») est déléguée à
+ * AddToCartForm, masqué pour les produits indisponibles.
  */
 export default function ProductCard({ product }: { product: Product }) {
   const unavailable = !product.available;

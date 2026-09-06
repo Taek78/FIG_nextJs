@@ -11,9 +11,12 @@ import LatestArticles from "@/components/home/LatestArticles";
  */
 
 /*
- * La page est prérendue (aucune donnée par requête), mais LatestArticles dépend de la
- * date du jour. `revalidate` demande à Next de régénérer la page au maximum une fois
- * par heure : sans cela, « À lire cette semaine » resterait figé sur la date du build.
+ * `revalidate` date d'avant le panier : la page était alors prérendue, et
+ * LatestArticles (qui dépend de la date du jour) devait être régénéré au plus
+ * une fois par heure. Depuis que le badge panier lit un cookie dans le layout,
+ * TOUTES les pages sont rendues à la requête et cette constante est sans effet.
+ * Conservée en garde-fou : si l'accueil redevenait statique un jour,
+ * « À lire cette semaine » ne se figerait pas à la date du build.
  */
 export const revalidate = 3600;
 

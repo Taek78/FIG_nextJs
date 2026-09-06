@@ -2,6 +2,10 @@ import { products } from "@/data/products";
 import ProductGrid from "@/components/ui/ProductGrid";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+/*
+ * Section « essentiels bio » de l'accueil : les 4 produits bio disponibles les
+ * moins chers, pour incarner la promesse « le bio accessible ».
+ */
 export default function OrganicProducts() {
   /*
    * On garde les produits bio disponibles, triés du moins cher au plus cher,

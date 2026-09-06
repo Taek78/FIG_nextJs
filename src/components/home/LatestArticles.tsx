@@ -3,6 +3,12 @@ import { getLatestArticles } from "@/utils/articles";
 import ArticleGrid from "@/components/ui/ArticleGrid";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+/*
+ * Section « À lire cette semaine » de l'accueil : au plus 3 articles publiés
+ * dans les 7 derniers jours, sélectionnés par les fonctions pures de
+ * utils/articles.ts.
+ */
+
 /** Fenêtre de « fraîcheur » éditoriale, et nombre de cartes affichées sur l'accueil. */
 const RECENT_DAYS = 7;
 const MAX_ARTICLES = 3;

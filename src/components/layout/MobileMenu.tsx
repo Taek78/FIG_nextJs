@@ -6,7 +6,7 @@ import type { NavLink } from "@/types/site";
 import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 
 /*
- * Seul Client Component du site pour l'instant.
+ * Client Component — l'un des deux du site, avec ui/SubmitButton.
  * "use client" est nécessaire car on utilise un état (useState) et des événements (onClick,
  * écoute du clavier) : ces API n'existent que dans le navigateur, pas côté serveur.
  * Le reste du header reste un Server Component : seul ce petit morceau embarque du JS.

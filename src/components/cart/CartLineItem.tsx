@@ -9,7 +9,8 @@ import {
   formatUnit,
 } from "@/utils/format";
 import { MinusIcon, PlusIcon, TrashIcon } from "@/components/ui/icons";
-import { QUANTITY_STEP } from "@/utils/cart"
+import { QUANTITY_STEP } from "@/utils/cart";
+import SubmitButton from "@/components/ui/SubmitButton";
 
 /*
  * Une ligne du panier, branchée sur les Server Actions.
@@ -21,6 +22,9 @@ import { QUANTITY_STEP } from "@/utils/cart"
  * HTML rendu : l'attribut name des boutons est retiré). Les <input hidden>,
  * eux, passent toujours — chaque bouton embarque donc ses propres champs.
  */
+const removeButtonClass =
+  "text-muted hover:text-accent-berry focus-visible:outline-primary inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2";
+
 const stepperButtonClass =
   "inline-flex size-9 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
@@ -76,12 +80,12 @@ export default function CartLineItem({ item }: { item: CartItem }) {
                 name="quantity"
                 value={item.quantity - step}
               />
-              <button type="submit" className={stepperButtonClass}>
+              <SubmitButton className={stepperButtonClass}>
                 <span className="sr-only">
                   Diminuer la quantité de {product.name}
                 </span>
                 <MinusIcon className="size-4" />
-              </button>
+              </SubmitButton>
             </form>
             <span className="min-w-16 text-center text-sm font-semibold tabular-nums">
               {formatQuantity(item.quantity, product.unit)}
@@ -93,12 +97,12 @@ export default function CartLineItem({ item }: { item: CartItem }) {
                 name="quantity"
                 value={item.quantity + step}
               />
-              <button type="submit" className={stepperButtonClass}>
+              <SubmitButton className={stepperButtonClass}>
                 <span className="sr-only">
                   Augmenter la quantité de {product.name}
                 </span>
                 <PlusIcon className="size-4" />
-              </button>
+              </SubmitButton>
             </form>
           </div>
         )}
@@ -117,14 +121,11 @@ export default function CartLineItem({ item }: { item: CartItem }) {
         )}
         <form action={removeFromCart}>
           <input type="hidden" name="productId" value={product.id} />
-          <button
-            type="submit"
-            className="text-muted hover:text-accent-berry focus-visible:outline-primary inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-          >
+          <SubmitButton className={removeButtonClass}>
             <TrashIcon className="size-4" />
             Retirer
             <span className="sr-only"> {product.name} du panier</span>
-          </button>
+          </SubmitButton>
         </form>
       </div>
     </li>

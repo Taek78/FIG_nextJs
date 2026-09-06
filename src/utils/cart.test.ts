@@ -6,6 +6,7 @@ import {
   FREE_DELIVERY_THRESHOLD_CENTS,
   MAX_CART_LINES,
   addLine,
+  computeLineTotalCents,
   hydrateCart,
   isCartLine,
   parseCartLines,
@@ -42,6 +43,7 @@ const product = (
   image: `/products/${overrides.id}.svg`,
   imageAlt: "",
   seasonMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  description: "Description du produit",
   ...overrides,
 });
 
@@ -327,4 +329,9 @@ describe("parseCartLines", () => {
     const panier = [line("v05", 500), line("f12", 3, "piece")];
     expect(parseCartLines(JSON.parse(JSON.stringify(panier)))).toEqual(panier);
   });
+});
+
+it("computeLineTotalCents : 2,30 €/kg × 500 g = 115 centimes", () => {
+  const courgette = product({ id: "v05", price: 2.3, unit: "kg" });
+  expect(computeLineTotalCents(courgette, 500)).toBe(115);
 });

@@ -9,7 +9,7 @@ import {
   formatUnit,
 } from "@/utils/format";
 import { MinusIcon, PlusIcon, TrashIcon } from "@/components/ui/icons";
-import type { ProductUnit } from "@/types/product";
+import { QUANTITY_STEP } from "@/utils/cart"
 
 /*
  * Une ligne du panier, branchée sur les Server Actions.
@@ -23,12 +23,6 @@ import type { ProductUnit } from "@/types/product";
  */
 const stepperButtonClass =
   "inline-flex size-9 items-center justify-center rounded-full text-text transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
-
-/** Pas d'incrément des steppers, dans l'unité de base du produit. */
-const QUANTITY_STEP: Record<ProductUnit, number> = {
-  kg: 300, // grammes — l'affichage bascule en kg dès 1000 (formatQuantity)
-  piece: 1,
-};
 
 export default function CartLineItem({ item }: { item: CartItem }) {
   const { product } = item;

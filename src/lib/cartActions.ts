@@ -26,6 +26,7 @@ import { revalidatePath } from "next/cache";
 
 export async function addToCart(formData: FormData): Promise<void> {
   const productId = formData.get("productId");
+  const rawQuantity = formData.get("quantity");
   if (typeof productId !== "string") {
     return;
   }
@@ -41,13 +42,24 @@ export async function addToCart(formData: FormData): Promise<void> {
     piece: 1,
   };
 
+  let quantity: number = defaultQuantity[product.unit];
+
+  // Quantité fournie (fiche produit) : remplace le défaut seulement si c'est
+  // un entier > 0 — tout le reste (absente, forgée, "2.5") retombe sur le défaut.
+  if (typeof rawQuantity === "string") {
+    const parsed = Number(rawQuantity);
+    if (Number.isInteger(parsed) && parsed > 0) {
+      quantity = parsed;
+    }
+  }
+
   const orderUnit: OrderUnit = product.unit === "kg" ? "g" : "piece";
 
   const lines = await readCart();
   const next = addLine(
     lines,
     product.id,
-    defaultQuantity[product.unit],
+    quantity,
     orderUnit,
     maxQuantityFor(product),
   );

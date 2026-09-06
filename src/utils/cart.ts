@@ -16,7 +16,7 @@
  * Conventions d'unités : voir l'en-tête de types/cart.ts.
  * Montants en centimes entiers, quantités en unité de base du produit.
  */
-import type { Product } from "@/types/product";
+import type { Product, ProductUnit } from "@/types/product";
 import type { CartItem, CartLine, CartSummary, OrderUnit } from "@/types/cart";
 import { ORDER_UNITS } from "@/types/cart";
 /** 20 kg, en grammes. Plafond par ligne pour un produit vendu au poids. */
@@ -33,6 +33,12 @@ export const DELIVERY_FEE_CENTS = 490;
 
 /** Un cookie plafonne à ~4 Ko ; une ligne pèse ~60 octets en JSON. */
 export const MAX_CART_LINES = 50;
+
+/** Pas d'incrément des steppers, dans l'unité de base du produit. */
+export const QUANTITY_STEP: Record<ProductUnit, number> = {
+  kg: 300, // grammes — l'affichage bascule en kg dès 1000 (formatQuantity)
+  piece: 1,
+};
 
 /**
  * 2.3 € → 230 centimes.
@@ -151,6 +157,15 @@ export function removeLine(lines: CartLine[], productId: string): CartLine[] {
 }
 
 /**
+ * Calcule le total en centimes pour une ligne de commande.
+ **/
+export function computeLineTotalCents(product: Product, quantity: number): number {
+  return Math.round(
+    (toCents(product.price) * quantity) / baseQuantityFor(product),
+  );
+}
+
+/**
  * Jointure lignes × catalogue : CartLine[] → CartItem[]. Seule fonction du module
  * à connaître les produits.
  *
@@ -174,9 +189,7 @@ export function hydrateCart(
       return [];
     }
 
-    const lineTotalCents = Math.round(
-      (toCents(product.price) * line.quantity) / baseQuantityFor(product),
-    );
+    const lineTotalCents = computeLineTotalCents(product, line.quantity);
 
     return [
       {
@@ -277,3 +290,5 @@ export function parseCartLines(raw: unknown): CartLine[] {
   }
   return raw.slice(0, MAX_CART_LINES).filter(isCartLine);
 }
+
+
